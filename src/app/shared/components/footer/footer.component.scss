@@ -1,0 +1,28 @@
+footer{
+  flex-grow: 1;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  background-color: #fff;
+  color: #7987a1;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-size: 14px;
+  padding:10px 15px;
+  position: relative;
+  bottom:5px;
+}
+
+a{
+  color: #0068ff;
+  margin: 0px 2px;
+  font-weight: 600;
+}
+
+.copyRight{
+  margin-right: 5px;
+}
+
+

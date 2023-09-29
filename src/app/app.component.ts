@@ -27,13 +27,13 @@ export class AppComponent {
   getTitlePage() {
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd),
-    )
-      .subscribe(() => {
+    ).subscribe(() => {
         var rt = this.getChild(this.activatedRoute)
         rt.data.subscribe((data: any) => {
           if (data['breadcrumb'] != null) {
             const title = data['breadcrumb']['label'];
-            this.store.dispatch(setTitle({ status: { 'title': title } }))
+            const id = data['breadcrumb']['id'];
+            this.store.dispatch(setTitle({ status: { 'title': title, 'id': id } }))
             this.titleService.setTitle('Osima' + '  ' + '|' + '  ' + title)
           }
         })

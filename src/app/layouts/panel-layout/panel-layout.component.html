@@ -1,9 +1,55 @@
-<app-header></app-header>
-<section class="layout_desktop">
-  <nav>
-    <app-navigation></app-navigation>
-  </nav>
-  <article class="layout_desktop_main">
-    <router-outlet></router-outlet>
-  </article>
-</section>
+
+<app-global-loader *ngIf="globalLoader | async" ></app-global-loader>
+<!-- desktop -->
+<div  *ngIf="!mobile" class="layout">
+  <div class="nav1" [@openCloseNav1]="openedNav1 ? 'open' : 'closed'">
+    <app-navigation-icon *ngIf="openedNav1 "></app-navigation-icon>
+  </div>
+  <div class="nav2" [@openCloseNav2]="openedNav2 ? 'open' : 'closed'">
+    <app-navigation *ngIf="openedNav2"></app-navigation>
+  </div>
+  <div class="main">
+    <div class="main-body" >
+      <app-header></app-header>
+      <div class="main-content">
+        <ng-container *ngTemplateOutlet="template"></ng-container>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+  <div class="btn-top" *ngIf="isShow" (click)="gotoTop()">
+    <i class="las la-angle-double-up"></i>
+  </div>
+</div>
+<!-- mobile -->
+<div class="layout-mobile" *ngIf="mobile">
+  <div class="main">
+    <div class="main-body">
+      <app-header></app-header>
+      <div class="navigation"  >
+        <div [@openCloseMobileNav1]="openedNavMobile1 ? 'open' : 'closed'">
+          <div class="nav-mobile" *ngIf="openedNavMobile1">
+            <app-navigation-icon ></app-navigation-icon>
+          </div>
+        </div>
+         <div [@openCloseMobileNav2]="openedNavMobile1 ? 'open' : 'closed'">
+          <div class="nav-mobile2" >
+            <app-navigation *ngIf="open" ></app-navigation>
+          </div>
+         </div>
+      </div>
+      <div class="main-content">
+        <ng-container *ngTemplateOutlet="template"></ng-container>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>
+  <div class="btn-top" *ngIf="isShow" (click)="gotoTop()">
+    <i class="las la-angle-double-up"></i>
+  </div>
+</div>
+
+<ng-template #template>
+  <router-outlet> </router-outlet>
+</ng-template>
+

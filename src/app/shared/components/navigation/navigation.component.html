@@ -1,2 +1,108 @@
 
-<p>nanigation</p>
+<div class="navigation">
+  <div class="content-body">
+    <div class="box-user">
+      <div class="user">
+        <img src="./../../../../assets/images/6.jpg" alt="">
+        <span class="online"></span>
+      </div>
+      <div class="content">
+        <div class="name">{{user}}</div>
+        <!-- <div class="title">{{userType.title}}</div> -->
+        <div class="icon">
+          <!-- <ul>
+            <li><a href="#"><i class="zmdi zmdi-facebook-box"></i></a></li>
+            <li><a href="#"><i class="zmdi zmdi-linkedin-box"></i></a></li>
+            <li><a href="#"><i class="zmdi zmdi-instagram"></i></a></li>
+            <li><a href="#"><i class="zmdi zmdi-twitter-box"></i></a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+    <ul class="user-current">
+      <li>
+        <div class="item-current">
+          <i class='bx bx-wallet-alt'></i>
+          <span class="title">شارژ پنل :</span>
+          <span class="digital">{{credit}}</span>
+        </div>
+      </li>
+      <li>
+        <div class="item-current">
+          <i class='bx bx-gift'></i>
+          <span class="title">شارژ هدیه :</span>
+          <span class="digital">0</span>
+        </div>
+      </li>
+    </ul>
+    <div class="menu" *ngIf="showNavigation != 'item' ">
+      <div class="title-menu">
+        <span> {{title}}</span>
+        <span class="dash">--</span>
+      </div>
+      <div class="box">
+        <ng-container *ngFor="let item of list ; let i = index;">
+          <div class="item-item box-item" *ngIf="item.type === 'item'">
+            <div [ngSwitch]="[item.url]">
+              <div *ngSwitchCase="'https://www.tapin.ir/woocommerce/'">
+                <a href='https://www.tapin.ir/woocommerce/' target="_blank">
+                  <i class="las la-shopping-cart tx-19"></i>
+                  {{item.name}}
+                </a>
+              </div>
+              <div *ngSwitchCase="'https://api.tapin.ir/api/v2/public/doc/'">
+                <a href='https://api.tapin.ir/api/v2/public/doc/' target="_blank">
+                  <i class="las la-shopping-cart tx-19"></i>
+                  {{item.name}}
+                </a>
+              </div>
+              <div *ngSwitchDefault>
+                <a [routerLink]="[item.url]" routerLinkActive="activeLink-p activeLink" (click)="closeNavigation()"
+                  [routerLinkActiveOptions]="{exact: false}">
+                  <i class="las la-shopping-cart tx-19"></i>
+                  {{item.name}}
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="box-item item-coll" *ngIf="item.type === 'collapsable'">
+            <div class="item-collapsable" (click)="chageSubMenu(item.id)">
+              <span>
+                <i class="las la-shopping-cart tx-19"></i>
+                {{item.name}}
+              </span>
+              <i [@collapse]="idSubmenu === item.id && show? 'open' : 'closed'" class="feather-chevron-up"></i>
+            </div>
+            <div [@openCloseTriger]="idSubmenu === item.id? 'open' : 'closed'">
+              <div class="child" *ngIf="idSubmenu === item.id && show">
+                <ul>
+                  <li *ngFor="let row of item.childern">
+                    <a (click)="closeNavigation()" [routerLink]="[row.url]" routerLinkActive="activeLink-c activeLink"
+                      [routerLinkActiveOptions]="{exact: true}">{{row.name}}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="account">
+      <div class="title-account">
+        <span>حساب ها</span>
+        <span class="dash">--</span>
+      </div>
+      <ul>
+        <li><a href="#"> <i class="las la-download text-success tx-20" style="color: #19b159"></i> Downloads </a>
+        </li>
+        <li><a href="#"> <i class="las la-folder-open text-danger tx-20" style="color: #ff5353"></i> Archive </a></li>
+        <li><a href="#"> <i class="las la-rss-square text-purple tx-20" style="color: #673ab7"></i> Feed Manager </a>
+        </li>
+        <li><a href="#"> <i class="las la-cog text-primary my-auto tx-20" style="color: #0068ff"></i> Settings </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,27 @@
+<div class="navigation-box"></div>
+<div class="navigation-icon" appClickOutside>
+  <div class="logo">
+    <a class="link" [routerLink]="['/']"><img src="./../../../../assets/images/tapin.ico" alt=""></a>
+  </div>
+  <nav>
+    <ul>
+      <li *ngFor="let item of Navigation" class="tooltip">
+        <a *ngIf="item.url == 'https://eersal.ir/';else notUrl" class="item" (click)="openNavigation()"
+          href='https://eersal.ir/' target="_blank">
+          <i class="side-menu__icon bx {{item.icon}}"></i>
+          <span class="tooltiptext">{{item.name}}</span>
+        </a>
+        <ng-template #notUrl>
+          <a class="item" (click)="openNavigation()" [routerLink]="[item.url]" routerLinkActive="activeLink"
+            [routerLinkActiveOptions]=" item.url != '/' && 'work-management' ? {exact: false}  : {exact: true}  ">
+            <i class="side-menu__icon bx {{item.icon}}"></i>
+            <span class="tooltiptext">{{item.name}}</span>
+          </a>
+        </ng-template>
+        <span class="tooltiptext">{{item.name}}</span>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+

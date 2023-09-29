@@ -1,0 +1,168 @@
+ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #283250;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c7c7c7;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #c7c7c7;
+}
+
+.xng-breadcrumb-trail {
+  color: #0068ff !important;
+  font-family: 'YekanBakh';
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.xng-breadcrumb-link{
+  color: #8092b1 !important;
+  font-family: 'YekanBakh';
+  font-size: 15px;
+  font-weight: 500;
+  &:hover{
+    text-decoration: none !important;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .xng-breadcrumb-link{
+    font-size: 15px;
+}
+
+.xng-breadcrumb-trail {
+  font-size: 15px;
+}
+}
+
+@media (max-width: 767.98px) {
+  .xng-breadcrumb-link{
+    font-size: 14px;
+}
+
+.xng-breadcrumb-trail {
+  font-size: 14px;
+}
+}
+
+a:-webkit-any-link {
+  text-decoration: none !important;
+}
+
+
+.mat-form-field-appearance-outline .mat-form-field-wrapper {
+   margin: 0 !important;
+}
+
+.mat-form-field-wrapper {
+   padding-bottom: 20px;
+}
+
+.mat-form-field-subscript-wrapper
+{
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+
+::-webkit-scrollbar{
+  height: 7px;
+  width: 5px;
+}
+
+
+::-webkit-scrollbar-thumb:horizontal{
+  background: #c7c7c7;
+  border-radius: 0;
+}
+
+
+.mat-form-field-empty.mat-form-field-label,
+.mat-form-field-can-float.mat-form-field-should-float .mat-form-field-label {
+  color: #596882 !important;
+  font-family: 'YekanBakh';
+}
+
+.snackbar-success {
+  color: white;
+  background-color: #4CAF50;
+  font-family: YekanBakh !important;
+  direction: rtl;
+}
+
+.snackbar-success .mat-simple-snackbar-action ,
+.snackbar-error .mat-simple-snackbar-action {
+  color: white;
+}
+
+.snackbar-error {
+  color: white;
+  background-color: #EC426F;
+  font-family: YekanBakh !important;
+  direction: rtl;
+}
+
+.success-snackbar, .snackbar-error {
+  white-space: pre-wrap
+}
+
+.mat-simple-snackbar {
+  span {
+    white-space: pre-line;
+  }
+}
+
+button , .mat-raised-button{
+  font-family: 'YekanBakh' !important;
+  font-size: 15px;
+  font-weight: 600 !important;
+}
+
+.btnDefult {
+  background-color: #061950;
+  color: #fff;
+}
+
+.btnAccent{
+  background-color: #ff4081;
+  color: #fff;
+}
+
+.mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {
+  font-family: 'YekanBakh' !important;
+  font-weight: 500;
+}
+
+@media (max-width: 575.98px) {
+  button , .mat-raised-button{
+    font-size: 13px !important;
+    font-weight: 500 !important;
+  }
+}
+

@@ -1,0 +1,502 @@
+<div class="nav-left">
+  <div  class="header">اطلاعیه های سفارشات</div>
+  <div class="tab">
+    <ul>
+      <li>
+        <button class="btn" (click)="changeTab('tab1')"  [ngClass]="tabNumber == 'tab1' ? 'active' : 'btn'">جدید</button>
+      </li>
+      <li>
+        <button class="btn" (click)="changeTab('tab2')"  [ngClass]="tabNumber == 'tab2' ? 'active' : 'btn'">تحت بررسی</button>
+      </li>
+      <li>
+        <button class="btn" (click)="changeTab('tab3')"  [ngClass]="tabNumber == 'tab3' ? 'active' : 'btn'">تکمیل شده</button>
+      </li>
+    </ul>
+  </div>
+  <div class="box-tab">
+      <div *ngIf="tabNumber ===  'tab1' ">
+        <div class="header-title">جدیدترین سفارشات</div>
+        <div class="tab-body">
+          <ul>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-blue"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-blue"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-blue"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-blue"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-blue"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-blue"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-bottom"></div>
+        <div class="header-title">سفارشات کنسل شده</div>
+        <div class="tab-body">
+          <ul>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+         <a class="all-order">
+           تمامی اطلاعیه ها
+         </a>
+      </div>
+      <div *ngIf="tabNumber ===  'tab2' ">
+        <div class="header-title">سفارشات تحت بررسی</div>
+        <div class="tab-body">
+          <ul>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-pink"><i class="typcn typcn-arrow-forward-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-pink"><i class="typcn typcn-arrow-forward-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-pink"><i class="typcn typcn-arrow-forward-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-pink"><i class="typcn typcn-arrow-forward-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-pink"><i class="typcn typcn-arrow-forward-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-pink"><i class="typcn typcn-arrow-forward-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-bottom"></div>
+        <div class="header-title">سفارشات کنسل شده</div>
+        <div class="tab-body">
+          <ul>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+         <a class="all-order">
+           تمامی اطلاعیه ها
+         </a>
+      </div>
+      <div *ngIf="tabNumber ===  'tab3' ">
+        <div class="header-title">سفارشات تکمیل شده</div>
+        <div class="tab-body">
+          <ul>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-grren"><i class="typcn typcn-tick-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-grren"><i class="typcn typcn-tick-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-grren"><i class="typcn typcn-tick-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-grren"><i class="typcn typcn-tick-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-grren"><i class="typcn typcn-tick-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-grren"><i class="typcn typcn-tick-outline"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-bottom"></div>
+        <div class="header-title">سفارشات کنسل شده</div>
+        <div class="tab-body">
+          <ul>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+            <li>
+              <div class="item">
+                <div class="right">
+                  <div class="icon icon-red"><i class="typcn typcn-shopping-cart"></i></div>
+                  <div class="value">
+                    <span class="order">تأیید سفارش</span>
+                    <span class="id">شماره محصول : <span>#</span>6543456</span>
+                  </div>
+                </div>
+                <div class="left">2 <span>ساعت</span><span>پیش</span></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+         <a class="all-order">
+           تمامی اطلاعیه ها
+         </a>
+      </div>
+  </div>
+</div>
+

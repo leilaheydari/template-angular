@@ -19,7 +19,8 @@ const routes: Routes = [
       import('./panel/panel.module').then(m => m.PanelModule),
     data: {
       breadcrumb: {
-        label: 'Dashboard',
+        label: 'خانه',
+        id: 'dashboard',
       },
     },
   },

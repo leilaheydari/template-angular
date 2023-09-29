@@ -1,0 +1,62 @@
+.page-not-found{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background-color: #061950;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.tx-1{
+  font-size: 24px;
+  font-weight: 300;
+  margin: 10px 0px 20px 0px;
+  font-family: YekanBakh , sans-serif !important;
+}
+
+.tx-2{
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 40px;
+}
+
+button{
+  background-color: #132d71;;
+  border-color: #12285f;;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 40px;
+  font-family: YekanBakh , sans-serif !important;
+}
+
+h1 {
+  line-height: 1;
+  font-size: 150px;
+  font-weight: 700;
+  color: #fff;
+  direction: rtl;
+  position: relative;
+}
+
+.tx-130 {
+  font-size: 130px;
+  font-family: "Awesome5" !important ;
+}
+
+.tx-20 {
+  font-size: 20px;
+  position: absolute;
+  bottom: 15px;
+  left: 86px;
+}
+
+.back-btn{
+  background-color: #febd2f !important;
+  font-family: YekanBakh , sans-serif !important;
+  letter-spacing: normal !important;
+}

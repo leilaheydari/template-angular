@@ -1,0 +1,162 @@
+@import url('./../../../../assets/scss/Typicons-Font.scss');
+
+.nav-left {
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+  background-color: #fff;
+  top:0;
+  .header {
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'YekanBakh';
+    border-bottom: 1px solid #e2e8f5;
+
+  }
+
+  .tab {
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      li {
+        display: inline-block;
+
+        .btn {
+          height: 40px;
+          width: 100px;
+          border: none;
+          font-family: 'YekanBakh';
+          background: #e9edf5;
+          font-weight: 500;
+          cursor: pointer;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
+
+.box-tab {
+  display: block;
+  width: 300px;
+  transition: 0.2s ease-in-out;
+  .header-title{
+    color: #1c273c;
+    font-family: 'YekanBakh';
+    font-weight: 600;
+    font-size: 15px;
+    padding:15px 15px 20px 15px;
+
+  }
+
+  .tab-body {
+    ul {
+      display: block;
+      padding:0px 15px;
+
+      li {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+
+        .item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-direction: row;
+
+          .right {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+
+            .icon {
+              width: 32px;
+              height: 32px;
+              border-radius: 50%;
+              display: inline-block;
+              color: #fff;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: row;
+              margin-left: 15px;
+              font-size: 21px;
+            }
+
+            .value {
+              display: flex;
+              align-items: flex-start;
+              justify-content: flex-start;
+              flex-direction: column;
+
+              .order {
+                font-family: 'YekanBakh';
+                font-weight: 500;
+                font-size: 15px;
+              }
+
+              .id {
+                margin-top: 2px;
+                font-size: 12px;
+                color: #97a3b9;
+              }
+            }
+          }
+
+          .left {
+            font-size: 12px;
+            color: #97a3b9;
+            span {
+              display: inline-block;
+              margin-left: 1px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tab-bottom{
+  border-top: 1px solid #e2e8f5 !important
+}
+
+.all-order{
+  color: #0068ff;
+  border:1px solid #0068ff;
+  display: block;
+  margin: 20px 15px;
+  padding: 8px;
+  text-align: center;
+  font-family: 'YekanBakh';
+  font-weight: 400;
+  font-size: 17px;
+  cursor: pointer;
+  &:hover{
+    background-color: #0068ff;
+    color: #fff;
+  }
+}
+
+.icon-blue{
+  background-color: #0068ff;
+}
+.icon-red{
+  background-color: #ff5353;
+}
+.icon-pink{
+  background-color: #f10075;
+}
+.icon-grren{
+  background-color: #51bb25;
+}
+
+.active{
+  color: #0068ff !important;
+  font-weight: 600 !important;
+}
