@@ -1,0 +1,44 @@
+<div class="chart-bar">
+  <app-card-header title="{{title}}" description={{description}}></app-card-header>
+  <div class="chart">
+    <div class="info-chart">
+      <ul>
+        <li>
+          <div class="item">
+            <span class="box">
+              <span class="c-blue color"></span>
+              <span class="value digital">1,320,000</span>
+              <span class="vahed">ریال</span>
+            </span>
+            <span class="title">گزارش فروش</span>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <span class="box">
+              <span class="c-pink color"></span>
+              <span class="value digital">1,320,000</span>
+              <span class="vahed">ریال</span>
+            </span>
+            <span class="title">درآمد سالانه</span>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <span class="box">
+              <span class="c-yellow color"></span>
+              <span class="value digital">1,320,000</span>
+              <span class="vahed">ریال</span>
+            </span>
+            <span class="title">سود کل</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="box-canvas">
+      <div class="canvas">
+        <canvas id="canvas" height="200px" width="260">{{chart}}</canvas>
+      </div>
+    </div>
+  </div>
+</div>

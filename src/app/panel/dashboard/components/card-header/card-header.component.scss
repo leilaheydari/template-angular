@@ -1,0 +1,29 @@
+.header {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%;
+  .title{
+    font-size: 17px;
+    font-weight: 600;
+    line-height: normal;
+    margin:0px 0px 10px 0px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: 'YekanBakh';
+  }
+  p{
+    color: #97a3b9;
+    font-weight: 400;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-family: 'YekanBakh';
+    line-height: 24px;
+  }
+}
+
+.more{
+  color: #0068ff !important;
+  display: inline-block;
+  margin-right: 1px;
+}

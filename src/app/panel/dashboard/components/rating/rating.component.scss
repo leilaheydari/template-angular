@@ -1,0 +1,144 @@
+@import url('./../../../../../assets/scss/Boxicons-Font.scss');
+
+.rating{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+  
+}
+.box-rating{
+  display: block;
+  width: 100% ;
+}
+.star{
+  color: #e8b210 !important;
+}
+
+.star-top{
+   .value{
+     font-weight: 500;
+     font-size: 35px;
+     line-height: 42px;
+   }
+   .bx{
+     margin-right:2px;
+     display: inline-block;
+     font-size: 14px;
+     line-height: 14px;
+   }
+}
+
+.costumer{
+  color: #031b4e;
+  font-family: 'YekanBakh';
+  font-weight: 500;
+  font-size: 13px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+ul{
+  display: block;
+  li{
+     display: block;
+     margin-bottom: 10px;
+    .item{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      margin:0px 13px;
+      .index{
+        font-weight: 400;
+        font-size: 13px;
+        min-width: 20px;
+      }
+      .star{
+        font-size: 18px;
+        min-width: 30px;
+      }
+      .border{
+         display: inline-block;
+         width: 100%;
+         direction: ltr !important;
+
+      }
+      .value {
+        font-weight: 500;
+        font-size: 13px;
+        min-width: 26px;
+        text-align: left;
+      }
+    }
+  }
+}
+
+mat-progress-bar
+{
+  height: 5px;
+  border-radius: 2.5px;
+  overflow: hidden;
+
+}
+
+.border{
+  ::ng-deep .mat-progress-bar-fill::after {
+    background-color: #0068ff;
+    border-radius: 2.5px;
+  }
+
+  ::ng-deep .mat-progress-bar-buffer {
+    background: #e4e8eb;
+  }
+
+  ::ng-deep .mat-progress-bar {
+    border-radius: 2px;
+  }
+}
+
+::ng-deep .star1 .mdc-linear-progress__bar-inner {
+  border-color: #ff5353 !important;
+}
+
+::ng-deep .star2 .mdc-linear-progress__bar-inner {
+  border-color: #0068ff !important;
+}
+
+::ng-deep .star3 .mdc-linear-progress__bar-inner {
+  border-color: #f0ad4e !important;
+}
+
+::ng-deep .star4 .mdc-linear-progress__bar-inner {
+  border-color: #00cccc!important;
+}
+
+::ng-deep .star5 .mdc-linear-progress__bar-inner {
+  border-color: #51bb25 !important;
+}
+
+.box-users{
+  display: block;
+  width: 100%;
+  margin: 25px auto 0px auto;
+  ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    li{
+      display: inline-block;
+      width: 32px;
+      height: 32px;
+      img{
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+      }
+    }
+  }
+}
+

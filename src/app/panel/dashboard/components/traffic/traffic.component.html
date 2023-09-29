@@ -1,0 +1,14 @@
+<div class="traffic">
+  <app-card-header title="{{title}}" description={{description}}></app-card-header>
+  <div class="box-traffic">
+       <ul>
+         <li *ngFor="let item of data; index as i">
+           <div class="item">
+             <span class="title">{{item.title}}</span>
+             <span class="digital count">{{item.count}}</span>
+             <span class="chart"><app-chart-line [data]="item.id"></app-chart-line></span>
+           </div>
+         </li>
+       </ul>
+  </div>
+</div>

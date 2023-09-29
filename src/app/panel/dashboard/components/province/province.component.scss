@@ -1,0 +1,105 @@
+@import url('./../../../../../assets/scss/Feather-Font.scss');
+
+.province{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+}
+
+.box-province{
+  display: block;
+  width: 100%;
+  ul{
+    li{
+      display: block;
+      border-bottom: 1px solid #e2e8f5;
+
+      .item{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 7px 0px;
+        .right{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          .icon{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            height: 32px;
+            width: 32px;
+            border-radius: 50%;
+            font-size: 25px;
+            margin-left: 10px;
+          }
+          .title{
+            font-size:14px ;
+            font-weight: 500;
+          }
+        }
+        .left{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 140;
+          .percent{
+            display: flex;
+            flex-direction: row;
+          }
+          .number{
+            margin-left: 10px;
+          }
+        }
+      }
+      &:last-child{
+        padding: 0 !important;
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+
+.c1 {
+   background-color: #f9e2e2;
+   color: #fd7e14;
+}
+.c2{
+   background-color: #f9e2e2;
+   color: #ff72a7;
+}
+.c3{
+   background-color:#d1ecf1;
+   color: #00b9fe;
+}
+.c4{
+  background-color: #E1DEFE;
+  color: #81a0e3;
+}
+.c5{
+  background-color: #d4f2e1;
+  color: #19b159;
+}
+.c6{
+   background-color: #d9e8ff;
+   color: #0068ff;
+}
+
+.c7{
+  background-color: #fdeced;
+  color: #ff0000;
+}
+
+.up{
+  color: #19b159 !important;
+}
+.down{
+  color: #ff5353 !important;
+}

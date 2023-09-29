@@ -1,0 +1,117 @@
+.chart-doughnut{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+}
+
+.chart-pie{
+  width: 100%;
+}
+
+.box{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+}
+
+.chart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  max-width: 50%;
+  width: 100%;
+  font-family: 'Vazirmatn' !important ;
+}
+
+.info-chart{
+   max-width: 50%;
+   width: 100%;
+   margin-right: 20px;
+   ul{
+     li{
+       display: block;
+       margin: 16px 0px;
+       .item{
+         .box-title{
+           margin-bottom: 5px;
+           .title{
+             margin-left: 2px;
+             font-size: 15px;
+             font-weight: 500;
+           }
+           .value{
+             color: #7987a1;
+             font-size: 14px;
+           }
+         }
+       }
+     }
+   }
+}
+
+mat-progress-bar
+{
+  height: 5px;
+  border-radius: 2.5px;
+  overflow: hidden;
+}
+
+.border{
+  direction: ltr !important;
+  ::ng-deep .mat-progress-bar-fill::after {
+    background-color: #0068ff;
+    border-radius: 2.5px;
+  }
+
+  ::ng-deep .mat-progress-bar-buffer {
+    background: #e4e8eb;
+  }
+
+  ::ng-deep .mat-progress-bar {
+    border-radius: 2px;
+  }
+}
+
+.star5{
+  ::ng-deep .mat-progress-bar-fill::after {
+    background-color: #51bb25;
+  }
+}
+
+::ng-deep .bar1 .mdc-linear-progress__bar-inner {
+  border-color: #0068ff !important;
+}
+
+::ng-deep .bar2 .mdc-linear-progress__bar-inner {
+  border-color: #00cccc !important;
+}
+
+::ng-deep .bar3 .mdc-linear-progress__bar-inner {
+  border-color: #f10075 !important;
+}
+
+::ng-deep .bar4 .mdc-linear-progress__bar-inner {
+  border-color: #673ab7!important;
+}
+
+::ng-deep .star5 .mdc-linear-progress__bar-inner {
+  border-color: #51bb25 !important;
+}
+
+@media (max-width: 575.98px) {
+  .box{
+      flex-direction: column;
+      width: 100%;
+
+  }
+  .info-chart{
+    max-width: 100%;
+    margin-right: 0;
+  }
+}

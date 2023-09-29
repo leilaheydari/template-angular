@@ -1,0 +1,90 @@
+
+.chart-bar{
+  padding: 1.25rem;
+}
+
+.chart{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 100%;
+  margin-top: 30px;
+  .info-chart {
+    max-width: 50%;
+    width: 100%;
+    ul{
+      li{
+        margin-bottom: 22px;
+        .item{
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          flex-direction: column;
+          .color{
+            height: 8px;
+            width: 8px;
+            display: inline-block;
+            margin-left: 10px;
+            border-radius: 2px;
+            overflow: hidden;
+          }
+          .value{
+            font-weight: 700;
+            font-size: 15px;
+            margin-left: 5px;
+            color: #031b4e;
+          }
+          .vahed{
+            font-weight: 700;
+            font-size: 15px;
+            color: #031b4e;
+          }
+          .title{
+            color: #7987a1;
+            font-size: 500;
+            margin-right: 18px;
+            font-family: 'YekanBakh';
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.c-blue {
+  background-color: #006fe6;
+}
+
+.c-pink{
+  background-color:#d60068 ;
+}
+
+.c-yellow{
+  background-color:#ebb000 ;
+}
+
+@media (max-width: 575.98px) {
+  .chart{
+      flex-direction: column;
+      width: 100%;
+      margin-bottom: 0;
+  }
+  .info-chart{
+    min-width: 100%;
+  }
+  .box-canvas{
+    width: 100%;
+    margin-left: 0px !important;
+  }
+}
+
+.box-canvas{
+   max-width: 50%;
+   display: flex;
+   align-items: center;
+   justify-content:center ;
+   flex-direction: column;
+   margin-left: 20px;
+}

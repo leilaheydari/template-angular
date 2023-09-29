@@ -1,0 +1,113 @@
+.chart-multi-line {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+
+  .box-chart {
+    position: relative;
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    flex-grow: 1;
+
+    .header {
+      display: block;
+      width: 100%;
+      margin-bottom: 5px;
+
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: row !important;
+        flex-wrap: nowrap;
+        width: 100%;
+
+        li {
+          display: inline-block;
+
+          .item {
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            .value {
+              font-size: 18px;
+              margin-bottom: 2px;
+              font-weight: 700;
+              color: #031b74;
+            }
+
+            .title {
+              font-family: 'YekanBakh';
+              color: #7987a1 !important;
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.client {
+  position: absolute;
+  top: 25px;
+  display: block;
+  width: 100%;
+
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      margin-left: 20px;
+
+      .title {
+        font-family: 'YekanBakh';
+        font-size: 13px;
+        margin-left: 8px;
+      }
+
+      .box {
+        height: 8px;
+        width: 8px;
+        border-radius: 2px;
+        overflow: hidden;
+        display: block;
+      }
+
+      .pink {
+        background-color: #f10075;
+      }
+
+      .blue {
+        background-color: #0068ff;
+      }
+    }
+  }
+}
+
+.chart-line {
+  position: relative;
+  width: 100%;
+  display: block;
+}
+
+.box-chart-multi-line{
+  display: block;
+}
+
+

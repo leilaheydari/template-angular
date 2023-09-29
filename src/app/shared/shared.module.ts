@@ -8,7 +8,6 @@ import { MaterialModule } from './material/material.module';
 import { RouterModule } from '@angular/router';
 import { ClickOutsideDirective } from '../core/directive/appClickOutside';
 
-
 @NgModule({
     imports: [
         CommonModule,

@@ -1,0 +1,45 @@
+<div class="chart-doughnut">
+  <app-card-header title="{{title}}" description={{description}}></app-card-header>
+ <div class="box">
+    <div class="chart" style="font-family: 'Vazirmatn' !important ;">
+      <canvas id="canvas-doughnut" height="200" width="190">{{chart}}</canvas>
+    </div>
+    <div class="info-chart">
+     <ul>
+       <li>
+         <div class="item">
+           <div class="box-title"><span class="title">تکمیل شده</span><span class="value digital">39%</span></div>
+           <div class="border bar1"><mat-progress-bar mode="determinate" value="70"></mat-progress-bar>
+           </div>
+         </div>
+       </li>
+       <li>
+        <div class="item">
+          <div class="box-title"><span class="title">در انتظار</span><span class="value digital">20%</span></div>
+          <div class="border bar2"><mat-progress-bar mode="determinate" value="20"></mat-progress-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <div class="box-title"><span class="title">آغاز شده</span><span  class="value digital">15%</span></div>
+          <div class="border bar3"><mat-progress-bar mode="determinate" value="50"></mat-progress-bar>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="item">
+          <div class="box-title"><span class="title">به اتمام رسیده</span><span  class="value digital">26%</span></div>
+          <div class="border bar4"><mat-progress-bar mode="determinate" value="26"></mat-progress-bar>
+          </div>
+        </div>
+      </li>
+     </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+

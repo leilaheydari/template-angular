@@ -1,0 +1,50 @@
+<div class="chart-multi-line">
+  <app-card-header title="{{title}}" description={{description}}></app-card-header>
+  <div  class="box-chart">
+    <div class="header">
+      <ul>
+        <li>
+          <div class="item">
+            <span class="value digital">38,980</span>
+            <span class="title">مشتریان جدید</span>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <span class="value digital">76,087</span>
+            <span class="title">حفظ شد</span>
+          </div>
+        </li>
+        <li>
+          <div class="item digital">
+            <span class="value">655,987</span>
+            <span class="title">کل مشتریان</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="chart-line">
+      <div class="client">
+        <ul>
+          <li>
+            <span class="title">مشتری های جدید</span>
+            <span class="blue box"></span>
+          </li>
+          <li>
+            <span class="title">مشتری سابق</span>
+            <span class="pink box"></span>
+          </li>
+        </ul>
+      </div>
+      <div class="box-chart-multi-line" style="height: auto;margin-bottom: 1.25rem ">
+       <div style="height: 265px">
+        <canvas id="canvas-multi-line"  >{{chart}}</canvas>
+       </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+

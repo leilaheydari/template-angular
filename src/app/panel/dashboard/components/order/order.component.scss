@@ -1,0 +1,85 @@
+.order{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1.25rem;
+}
+
+.box-order{
+  display: block;
+  width: 100%;
+  ul{
+    li{
+      display: block;
+      margin-bottom: 8px;
+      .box{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+       .left{
+         display: flex;
+         align-items: center;
+         justify-content: flex-end;
+          img{
+            height: 43px;
+            width: 43px;
+            border-radius: 6px;
+            overflow: hidden;
+          }
+       }
+       .right{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+         .item{
+          margin-left: 10px;
+
+           img{
+             height: 43px;
+             width: 43px;
+             border-radius: 50%;
+           }
+
+
+         }
+       }
+      }
+      &:last-child{
+        margin-bottom: 0 !important;
+      }
+    }
+  }
+}
+
+
+.item-name{
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  .name{
+   font-family: 'YekanBakh';
+   font-weight: 600;
+   font-size: 15px;
+   margin-bottom: 1px;
+   text-overflow: ellipsis;
+   overflow: hidden;
+   height: 24px;
+   width: 130px;
+  }
+  .id{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 24px;
+    width: 130px;
+    color: #7987a1 !important;
+    .color{
+      font-family: 'YekanBakh';
+    }
+  }
+}
