@@ -11,8 +11,8 @@ describe('ShoppingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShoppingComponent ]
-    })
+    imports: [ShoppingComponent]
+})
     .compileComponents();
   }));
 

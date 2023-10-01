@@ -11,8 +11,8 @@ describe('NotificationEmailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotificationEmailComponent ]
-    })
+    imports: [NotificationEmailComponent]
+})
     .compileComponents();
   }));
 

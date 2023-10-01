@@ -11,8 +11,8 @@ describe('NotificationBellComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NotificationBellComponent ]
-    })
+    imports: [NotificationBellComponent]
+})
     .compileComponents();
   }));
 

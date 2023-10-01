@@ -11,8 +11,8 @@ describe('ProvinceComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProvinceComponent ]
-    })
+    imports: [ProvinceComponent]
+})
     .compileComponents();
   }));
 

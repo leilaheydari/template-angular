@@ -11,8 +11,8 @@ describe('NavigationLeftComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavigationLeftComponent ]
-    })
+    imports: [NavigationLeftComponent]
+})
     .compileComponents();
   }));
 

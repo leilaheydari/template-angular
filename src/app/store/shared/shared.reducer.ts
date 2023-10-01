@@ -1,4 +1,5 @@
 import {
+  setButtonLoading,
   setClickOutside,
   setLoadingSpinner,
   setNavigationMobilePanel,
@@ -38,6 +39,12 @@ const _sharedReducer = createReducer(
     return {
       ...state,
       ClickOutside: action.status,
+    };
+  }),
+  on(setButtonLoading, (state, action) => {
+    return {
+      ...state,
+      ButtonLoading: action.status,
     };
   }),
 );

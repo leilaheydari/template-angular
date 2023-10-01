@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PanelLayoutComponent } from './layouts/panel-layout/panel-layout.component';
 import { PageNotFoundComponent } from './shared/components/page-not-found/page-not-found.component';
+import { authGuard } from './guards/auth.guard';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
         id: 'dashboard',
       },
     },
+    canActivate: [authGuard]
   },
   { path: '404', component: PageNotFoundComponent },
   { path: '**', redirectTo: '/404' }

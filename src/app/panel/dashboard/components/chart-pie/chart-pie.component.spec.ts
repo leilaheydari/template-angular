@@ -11,8 +11,8 @@ describe('ChartPieComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChartPieComponent ]
-    })
+    imports: [ChartPieComponent]
+})
     .compileComponents();
   }));
 

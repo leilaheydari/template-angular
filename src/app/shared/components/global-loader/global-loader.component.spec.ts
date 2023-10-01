@@ -11,8 +11,8 @@ describe('GlobalLoaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GlobalLoaderComponent ]
-    })
+    imports: [GlobalLoaderComponent]
+})
     .compileComponents();
   }));
 

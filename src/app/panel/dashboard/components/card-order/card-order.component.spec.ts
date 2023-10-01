@@ -11,8 +11,8 @@ describe('CardOrderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CardOrderComponent ]
-    })
+    imports: [CardOrderComponent]
+})
     .compileComponents();
   }));
 

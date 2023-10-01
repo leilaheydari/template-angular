@@ -7,6 +7,7 @@ export interface SharedState {
   showNavigationPanel: number;
   showNavigationMobilePanel: number;
   ClickOutside: string;
+  ButtonLoading: boolean,
 }
 
 export const initialState: SharedState = {
@@ -18,5 +19,6 @@ export const initialState: SharedState = {
   showNavigationPanel: 2,
   showNavigationMobilePanel: 0,
   ClickOutside: 'outside',
+  ButtonLoading: false,
 };
 

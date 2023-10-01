@@ -11,8 +11,8 @@ describe('TrafficComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TrafficComponent ]
-    })
+    imports: [TrafficComponent]
+})
     .compileComponents();
   }));
 

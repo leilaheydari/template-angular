@@ -11,8 +11,8 @@ describe('ProfileHeaderComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ProfileHeaderComponent ]
-    })
+    imports: [ProfileHeaderComponent]
+})
     .compileComponents();
   }));
 

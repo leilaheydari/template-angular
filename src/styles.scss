@@ -879,4 +879,409 @@ video {
 }
 }
 
+.form {
+  width: 100%;
+  display: block;
+  margin-top: 30px;
+}
+
+.btn-full {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-submit {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #061950;
+  color: #fff;
+  font-family: 'YekanBakh';
+  cursor: pointer;
+}
+
+.btn-defult {
+  width: 100%;
+  margin-bottom: 15px;
+  background-color: #ff5353;
+  color: #fff;
+  font-family: 'YekanBakh';
+  cursor: pointer;
+}
+
+.title {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  color: #031b4e;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.in {
+  width: 100%;
+  margin-bottom: 2px;
+  position: relative;
+}
+
+.in1-message {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.message-title {
+  color: red;
+}
+
+
+.box-account {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.account {
+  color: #a5a0b1;
+  margin: 0px 3px;
+  display: inline-block;
+}
+
+.header-account {
+  color: #0068ff;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+.message {
+  font-family: 'YekanBakh';
+  font-weight: 500;
+  line-height: 15px;
+  font-size: 12px;
+  color: #596882;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.digital {
+  font-size: 14px;
+  font-weight: 400 !important;
+}
+
+input {
+  color: #14112d;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: 'Vazirmatn';
+  margin: 0 !important;
+  width: 100%;
+}
+
+.mat-form-field-infix {
+  display: block;
+  position: relative;
+  flex: auto;
+  min-width: 0;
+  width: 180px;
+  font-weight: 500;
+  font-family: 'YekanBakh';
+  font-size: 14px;
+  color: #596882;
+}
+
+.mat-error {
+  font-family: 'YekanBakh';
+  font-size: 10px;
+  font-weight: 500;
+  margin-right: 2px;
+  margin-top: 3px;
+}
+
+.error-marker {
+  position: relative;
+  top: 0px;
+  margin: 1px 1px 6px 1px;
+  display: inline-block
+}
+
+.mask-digital {
+  direction: ltr;
+  text-align: center;
+}
+
+input::placeholder {
+  font-size: 11px;
+  color: #9c9c9c;
+  direction: ltr;
+  text-align: right;
+}
+
+.fa-spinner {
+  margin-left: 5px;
+}
+
+a {
+  cursor: pointer;
+}
+
+.footer-link-login {
+  margin-top: 15px;
+}
+
+.fx {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  margin-bottom: 10px;
+}
+
+.fx-2 {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.fx-200 {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 200px));
+}
+
+@media (max-width: 991.98px) {
+  .fx-200 {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.fx-25-75 {
+  display: grid;
+  grid-row-start: 2;
+  column-gap: 10px;
+  grid-template-columns: 1fr 2fr;
+}
+
+
+
+.fx-100 {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: 1fr;
+}
+
+.head-title {
+  font-weight: bold;
+  border-bottom: 3px dashed #febd2f !important;
+  padding: 5px;
+  margin: 0px 0px 5px 0px;
+  font-family: 'YekanBakh';
+}
+
+.tutorial {
+  font-weight: 500;
+  margin-right: 10px;
+  color: rgb(170, 170, 170);
+  cursor: pointer;
+
+}
+
+.tutorial:hover {
+  color: #0068ff !important;
+}
+
+.box-title {
+  display: block;
+  height: 40px;
+  margin-bottom: 5px;
+}
+
+.ml-9 {
+  margin-right: 9px;
+}
+
+.title-text {
+  display: inline-block;
+}
+
+
+
+.add-btn {
+  font-family: 'YekanBakh';
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+}
+
+tr.mat-header-row {
+  background-color: #505cbc;
+  max-height: 30px;
+  padding: 0;
+  font-family: 'YekanBakh';
+
+}
+
+.mat-header-cell {
+  color: #fff !important;
+}
+
+
+.mat-row:hover .mat-cell {
+  background-color: #e9ebf3;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+  background-color: #e9ebf3;
+  font-family: 'Vazirmatn';
+}
+
+.string-number {
+  font-family: 'Vazirmatn';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mat-cell,
+.mat-footer-cell {
+  font-size: 12px;
+}
+
+tr.mat-header-row,
+tr.mat-footer-row,
+tr.mat-row {
+  height: 35px;
+}
+
+.box-product-tabel {
+  margin-bottom: 30px;
+  margin-top: 1px;
+}
+
+.action-footer-t {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.mat-elevation-z8 {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%), 0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+}
+
+.action-btn {
+  color: #fff;
+  background-color: #3b978c;
+  cursor: pointer;
+}
+
+.btnMap {
+  background-color: #ff5353;
+  color: #fff;
+  position: relative;
+  margin: 0 0px 0 0;
+  width: 100%;
+  height: 48px;
+  cursor: pointer;
+}
+
+.fa-plus {
+  margin-left: 2px;
+  font-size: 12px;
+}
+
+.btn-icon {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 34px;
+  width: 34px;
+  margin-left: 4px;
+  font-size: 20px !important;
+  cursor: pointer;
+}
+
+.fa-trash-a {
+  background-color: #e91e63;
+  color: #fff;
+  padding: 5px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.header-dialog {
+  font-family: 'YekanBakh';
+  direction: rtl;
+  text-align: right;
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  font-weight: 600;
+  padding: 20px 20px;
+  margin: -24px -24px 0 -24px;
+  position: relative;
+  font-size: 15px;
+  border-bottom: 1px solid #e2e8f5;
+}
+
+.btn-close {
+  margin-left: 5px;
+  color: #ffffff;
+  background-color: #7987a1;
+  border-color: #7987a1;
+}
+
+@media (max-width: 991.98px) {
+  .fx-2 {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)) !important;
+  }
+}
+
+.footer-action {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.btn-next {
+  color: #fff;
+  background-color: #061950;
+}
+
+.btn-prev {
+  color: #ffffff;
+  background-color: #7987a1;
+  border-color: #7987a1;
+  margin-left: 5px;
+}
+
+
+.box-form-search {
+  margin-top: 20px;
+}
+
+.in-des{
+  grid-column: auto / span 2;
+}
+
+
  

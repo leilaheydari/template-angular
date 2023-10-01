@@ -11,8 +11,8 @@ describe('ChartLineComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChartLineComponent ]
-    })
+    imports: [ChartLineComponent]
+})
     .compileComponents();
   }));
 

@@ -9,6 +9,7 @@ import { EffectsModule } from '@ngrx/effects';
 import { PanelLayoutComponent } from './layouts/panel-layout/panel-layout.component';
 import { appReducer } from './store/app.state';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { AuthEffects } from './auth/store/auth.effects';
 
 @NgModule({
     declarations: [AppComponent],
@@ -18,7 +19,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
         BrowserAnimationsModule,
         StoreModule.forRoot(appReducer),
         StoreDevtoolsModule.instrument({ maxAge: 25, logOnly: !isDevMode() }),
-        EffectsModule.forRoot([]),
+        EffectsModule.forRoot([AuthEffects ]),
         PanelLayoutComponent
     ],
     providers: [],

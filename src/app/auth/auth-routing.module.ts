@@ -1,7 +1,33 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthComponent } from './components/auth/auth.component';
+import { LoginComponent } from './components/login/login.component';
 
-const routes: Routes = [];
+
+
+const routes: Routes = [
+  {
+    path: '',
+    component: AuthComponent,
+    children: [
+      {
+        path: 'login', component: LoginComponent,
+        data: {
+          title: 'ورود'
+        }
+      },
+      {
+        path: '', component: LoginComponent,
+        data: {
+          title: 'ورود'
+        }
+      },
+    ],
+    data: {
+      title: 'احراز هویت'
+    }
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
