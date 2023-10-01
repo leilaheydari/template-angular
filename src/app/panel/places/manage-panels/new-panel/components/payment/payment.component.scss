@@ -1,0 +1,189 @@
+@import url('./../../../../../../../assets/scss/Form.scss');
+
+.footer-action{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box-payment{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  font-family: 'YekanBakh';
+}
+
+.page-htb{
+  margin-bottom: 1.3rem;
+}
+
+.right{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 300px;
+  font-family: 'YekanBakh';
+  .radio{
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #0077ff;
+    padding: 2px;
+    position: relative;
+    &::after{
+      content: '';
+      position: absolute;
+      border: 2px solid #0077ff;
+      height: 12px;
+      width: 12px;
+      display: inline-block;
+      border-radius: 50%;
+      top:-4px;
+      right: -4px;
+    }
+    &:hover{
+      background-color: #005cc8;
+    }
+  }
+
+  .img-asan{
+    max-width: 35px;
+    height: auto;
+    margin: 0px 5px;
+  }
+
+  .text{
+    font-size: 15px;
+    font-weight: 600;
+  }
+}
+
+
+
+.left{
+  flex-grow: 1;
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px 32px;
+  border: 1px solid #febd2f;
+  border-top: 18px solid #febd2f;
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 400px);
+  font-family: 'YekanBakh';
+  .box{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 5px;
+    .text{
+      width: 60%;
+      .header{
+        display: block;
+        font-weight: 600;
+        font-size: 15px;
+        margin-bottom:5px ;
+      }
+      p{
+        color: #97a3b9;
+      }
+    }
+  }
+  .price{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    font-weight: 500;
+  }
+  .discount{
+      padding-top: 20px;
+      border-top: 1px solid #dce7f5;
+  }
+}
+
+.box-discount{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: calc(100% - 64px);
+}
+
+.btnDiscount{
+  margin-right: 5px;
+  top: -10px;
+  color: #fff;
+  background-color: rgb(59, 151, 140);
+  font-family: 'YekanBakh';
+}
+
+.total{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 15px;
+  font-family: 'YekanBakh';
+  .digital{
+    margin-left: 2px;
+    font-weight: 600 !important;
+  }
+}
+
+.in75{
+  margin-bottom: 0 !important;
+}
+
+@media (max-width: 767.98px) {
+  h1{
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .box-payment{
+    flex-direction: column;
+    margin: auto;
+  }
+  .right{
+    width: calc(100% - 60px);
+    margin-bottom: 20px;
+  }
+  .left{
+    width: calc(100%);
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 24px 15px;
+
+  }
+
+  .left{
+    .box{
+      .text{
+        width: 70%;
+        .header{
+          font-weight: 600;
+          font-size: 15px;
+          margin-bottom:5px ;
+        }
+        p{
+          color: #97a3b9;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  .box-discount{
+    max-width: calc(100% - 30px);
+  }
+  .total{
+    font-weight: 700;
+    font-size: 14px;
+  }
+}

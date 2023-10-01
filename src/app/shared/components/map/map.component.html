@@ -1,0 +1,12 @@
+<div class="map-container">
+  <div class="header-top">
+    <span>لطفا موقعیت خود را بر روی نقشه مشخص نمایید :</span>
+    <div class="box-btn">
+      <button class="btnSucces" mat-button [mat-dialog-close]="true" (click)="selectLocation()">تایید</button>
+      <button class="btnAccent" mat-button [mat-dialog-close]="true" (click)="close()" style="margin-right:5px">بستن</button>
+    </div>
+  </div>
+  <div class="map-frame">
+    <div id="map"></div>
+  </div>
+</div>

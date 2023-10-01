@@ -1,0 +1,500 @@
+<div class="page-htb-shop" dir="rtl">
+  <mat-stepper #stepper class="example-stepper" linear [orientation]="(stepperOrientation | async)!">
+
+
+    <mat-step [stepControl]="typeShopFormGroup" label="نوع فروشگاه">
+      <div class="item-step form-step">
+        <div class="head">نوع فروشگاه</div>
+        <div class="contant">
+          <div>
+            <form style="margin-top:-10px ;" [formGroup]="typeShopFormGroup">
+              <label>ابتدا نوع فعالیت خود را مشخص کنید.</label>
+              <mat-radio-group formControlName="personType" (change)="changeFn($event)" aria-label="Select an option">
+                <mat-radio-button value="1">حقیقی هستم</mat-radio-button>
+                <mat-radio-button value="2" class="mr-15">حقوقی هستم</mat-radio-button>
+              </mat-radio-group>
+              <div class="footer-action">
+                <button mat-raised-button matStepperNext class="btn-next">بعدی</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="companyFormGroup" label="اطلاعات هویتی مدیر عامل" *ngIf="showCompany">
+      <div class="item-step form-step">
+        <div class="head">اطلاعات هویتی مدیر عامل</div>
+        <div class="contant">
+          <div>
+            <form [formGroup]="companyFormGroup">
+              <div class="fx">
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>نام شرکت</mat-label>
+                    <input maxlength="50" type="text" formControlName="company_name" matInput required />
+                    <mat-error
+                      *ngIf="c['company_name'].errors?.['required'] && (c['company_name'].dirty || c['company_name'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>کد اقتصادی</mat-label>
+                    <input class="digital" minlength="5" maxlength="50"
+                      oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="text" formControlName="economic_code"
+                      matInput required />
+                    <mat-error
+                      *ngIf="c['economic_code'].errors?.['required'] && (c['economic_code'].dirty || c['economic_code'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>شناسه ملی شرکت</mat-label>
+                    <input class="digital" minlength="5" maxlength="50"
+                      oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="text"
+                      formControlName="company_national_code" matInput required />
+                    <mat-error
+                      *ngIf="c['company_national_code'].errors?.['required'] && (c['company_national_code'].dirty || c['company_national_code'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>شماره ثبت</mat-label>
+                    <input class="digital" minlength="5" maxlength="50"
+                      oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="text" formControlName="register_code"
+                      matInput required />
+                    <mat-error
+                      *ngIf="c['register_code'].errors?.['required'] && (c['register_code'].dirty || c['register_code'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="footer-action">
+                <button mat-raised-button matStepperPrevious class="btn-prev">قبلی</button>
+                <button mat-raised-button matStepperNext class="btn-next">بعدی</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="PersonalFormGroup" label="اطلاعات هویتی">
+      <div class="item-step form-step">
+        <div class="head">اطلاعات هویتی</div>
+        <div class="contant">
+          <div>
+            <form [formGroup]="PersonalFormGroup">
+              <div class="fx">
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>نام</mat-label>
+                    <input type="text" formControlName="first_name" matInput required />
+                    <mat-error
+                      *ngIf="f['first_name'].errors?.['required'] && (f['first_name'].dirty || f['first_name'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                    <mat-error
+                      *ngIf="f['first_name'].errors?.['pattern'] && (f['first_name'].dirty || f['first_name'].touched)">
+                      کاراکتر فارسی وارد نمایید.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>نام خانوادگی</mat-label>
+                    <input type="text" formControlName="last_name" matInput required />
+                    <mat-error
+                      *ngIf="f['last_name'].errors?.['required'] && (f['last_name'].dirty || f['last_name'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                    <mat-error
+                      *ngIf="f['last_name'].errors?.['pattern'] && (f['last_name'].dirty || f['last_name'].touched)">
+                      کاراکتر فارسی وارد نمایید.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>نام پدر</mat-label>
+                    <input type="text" formControlName="father_name" matInput required />
+                    <mat-error
+                      *ngIf="f['father_name'].errors?.['required'] && (f['father_name'].dirty || f['father_name'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                    <mat-error
+                      *ngIf="f['father_name'].errors?.['pattern'] && (f['father_name'].dirty || f['father_name'].touched)">
+                      کاراکتر فارسی وارد نمایید.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>کدملی</mat-label>
+                    <input class="digital" maxlength="10" minlength="10"
+                      oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="text" formControlName="national_code"
+                      matInput required />
+                    <mat-error
+                      *ngIf="f['national_code'].errors?.['required'] && (f['national_code'].dirty || f['national_code'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                    <mat-error
+                      *ngIf="f['national_code'].errors?.['pattern'] && (f['national_code'].dirty || f['national_code'].touched)">
+                      کد ملی 10 رقمی خود را وارد نمایید..
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>سریال شناسنامه</mat-label>
+                    <input class="digital" maxlength="8" minlength="8"
+                      oninput="this.value=this.value.replace(/[^0-9]/g,'');" type="text"
+                      formControlName="certificate_serial_number" matInput required />
+                    <mat-error
+                      *ngIf="f['certificate_serial_number'].errors?.['required'] && (f['certificate_serial_number'].dirty || f['certificate_serial_number'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                    <mat-error *ngIf="f['certificate_serial_number'].errors?.['minlength']">
+                      سریال شناسنامه بدون حروف و 8 رقم وارد نمایید.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>شماره شناسنامه</mat-label>
+                    <input class="digital" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                      type="text" formControlName="birthday_certificate_no" matInput required />
+                    <mat-error
+                      *ngIf="f['birthday_certificate_no'].errors?.['required'] && (f['birthday_certificate_no'].dirty || f['birthday_certificate_no'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>محل صدور</mat-label>
+                    <input type="text" formControlName="birthday_location" matInput required />
+                    <mat-error
+                      *ngIf="f['birthday_location'].errors?.['required'] && (f['birthday_location'].dirty || f['birthday_location'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                    <mat-error
+                      *ngIf="f['birthday_location'].errors?.['pattern'] && (f['birthday_location'].dirty || f['birthday_location'].touched)">
+                      کاراکتر فارسی وارد نمایید.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>
+                      تاریخ تولد
+                    </mat-label>
+                    <input class="digital" mode="day" required matInput [matDatepicker]="dateBirthDate"
+                      formControlName="birth_date">
+                    <mat-datepicker-toggle matSuffix [for]="dateBirthDate"></mat-datepicker-toggle>
+                    <mat-datepicker disabled="false" #dateBirthDate></mat-datepicker>
+                    <mat-error
+                      *ngIf="f['birth_date'].errors?.['required'] && (f['birth_date'].dirty || f['birth_date'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>تلفن</mat-label>
+                    <input class="digital" type="text" formControlName="phone" matInput required />
+                    <mat-error *ngIf="f['phone'].errors?.['required'] && (f['phone'].dirty || f['phone'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                    <mat-error *ngIf="f['phone'].errors?.['pattern'] && (f['phone'].dirty || f['phone'].touched)">
+                      شماره وارد شده صحیح نمی باشد.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+                <div class="in">
+                  <mat-form-field appearance="outline">
+                    <mat-label>موبایل</mat-label>
+                    <input class="digital" type="text" formControlName="mobile" matInput required />
+                    <mat-error *ngIf="f['mobile'].errors?.['required'] && (f['mobile'].dirty || f['mobile'].touched)">
+                      وارد کردن این فیلد اجباری می باشد.
+                    </mat-error>
+                    <mat-error *ngIf="f['mobile'].errors?.['pattern'] && (f['mobile'].dirty || f['mobile'].touched)">
+                      شماره وارد شده صحیح نمی باشد.
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+              </div>
+              <div class="footer-action">
+                <button mat-raised-button matStepperPrevious class="btn-prev">قبلی</button>
+                <button mat-raised-button matStepperNext class="btn-next">بعدی</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-step>
+
+    <mat-step [stepControl]="ShopFormGroup" label="مشخصات فروشگاه">
+      <div class="item-step form-step">
+        <div class="head">مشخصات فروشگاه</div>
+        <div class="contant">
+          <form [formGroup]="ShopFormGroup">
+            <div class="fx">
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>عنوان پنل</mat-label>
+                  <input maxlength="50" type="text" formControlName="shop_name" matInput required />
+                  <mat-error
+                    *ngIf="SI['shop_name'].errors?.['required'] && (SI['shop_name'].dirty || SI['shop_name'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>دسته بندی</mat-label>
+                  <mat-select formControlName="category_code">
+                    <mat-option *ngFor="let category of listCategory" [value]="category.code">
+                      {{category.title}}
+                    </mat-option>
+                  </mat-select>
+                  <!-- <mat-error
+                    *ngIf="SI['category_code'].errors?.['required'] && (SI['category_code'].dirty || SI['category_code'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error> -->
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>وب سایت</mat-label>
+                  <input class="web" placeholder="آدرس وب سایت با حروف کوچک لاتین وارد نمایید" type="text"
+                    formControlName="website" matInput />
+                  <mat-error
+                    *ngIf="SI['website'].errors?.['pattern'] && (SI['website'].dirty || SI['website'].touched)">
+                    فرمت وارد شده صحیح نمی باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>صفحه اینستاگرام</mat-label>
+                  <input type="text" formControlName="instagram_id" matInput />
+                  <!-- <mat-error *ngIf="SI['instagram_id'].errors?.['pattern'] && (SI['instagram_id'].dirty || SI['instagram_id'].touched)">
+                    فرمت وارد شده صحیح نمی باشد.
+                  </mat-error> -->
+                </mat-form-field>
+              </div>
+
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>استان</mat-label>
+                  <mat-select formControlName="province" (ngModelChange)="provinceId()" required>
+                    <mat-option *ngFor="let province of listProvince" [value]="province.code">
+                      {{province.title}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error
+                    *ngIf="SI['province'].errors?.['required'] && (SI['province'].dirty || SI['province'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>شهر</mat-label>
+                  <mat-select formControlName="city">
+                    <mat-option *ngFor="let city of listCity" [value]="city.code">
+                      {{city.title}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="SI['city'].errors?.['required'] && (SI['city'].dirty || SI['city'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>طبقه</mat-label>
+                  <input class="digital" maxlength="4" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                    type="text" formControlName="floor" matInput required />
+                  <mat-error *ngIf="SI['floor'].errors?.['required'] && (SI['floor'].dirty || SI['floor'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>واحد</mat-label>
+                  <input class="digital" maxlength="4" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                    type="text" formControlName="unit" matInput required />
+                  <mat-error *ngIf="SI['unit'].errors?.['required'] && (SI['unit'].dirty || SI['unit'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>پلاک</mat-label>
+                  <input class="digital" maxlength="10" oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+                    type="text" formControlName="plaque" matInput required />
+                  <mat-error *ngIf="SI['plaque'].errors?.['required'] && (SI['plaque'].dirty || SI['plaque'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>کدپستی</mat-label>
+                  <input class="digital" type="number" formControlName="postal_code" matInput required />
+                  <mat-error
+                    *ngIf="SI['postal_code'].errors?.['required'] && (SI['postal_code'].dirty || SI['postal_code'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                  <mat-error
+                    *ngIf="SI['postal_code'].errors?.['pattern'] && (SI['postal_code'].dirty || SI['postal_code'].touched)">
+                    فرمت وارد شده صحیح نمی باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>ساعت کار</mat-label>
+                  <input  class="digital mask-digital" type="text"
+                    formControlName="available_hours" matInput required />
+                  <mat-error
+                    *ngIf="SI['available_hours'].errors?.['required'] && (SI['available_hours'].dirty || SI['available_hours'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>شماره ثابت</mat-label>
+                  <input class="digital" type="text" formControlName="shop_phone" matInput required />
+                  <mat-error
+                    *ngIf="SI['shop_phone'].errors?.['required'] && (SI['shop_phone'].dirty || SI['shop_phone'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                  <mat-error
+                    *ngIf="SI['shop_phone'].errors?.['pattern'] && (SI['shop_phone'].dirty || SI['shop_phone'].touched)">
+                    شماره وارد شده صحیح نمی باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in">
+                <mat-form-field appearance="outline">
+                  <mat-label>ایمیل</mat-label>
+                  <input autocomplete="new-email" type="email" formControlName="email" matInput required />
+                  <mat-error *ngIf="SI['email'].errors?.['required'] && (SI['email'].dirty || SI['email'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                  <mat-error *ngIf="SI['email'].hasError('email') && !SI['email'].hasError('required')">
+                    فرمت ایمیل وارد شده صحیح نمی باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in-des">
+                <mat-form-field appearance="outline">
+                  <mat-label>آدرس فروشگاه</mat-label>
+                  <input maxlength="255" type="text" placeholder="آدرس فروشگاه را وارد نمایید" formControlName="address"
+                    matInput required />
+                  <mat-error
+                    *ngIf="SI['address'].errors?.['required'] && (SI['address'].dirty || SI['address'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in-des">
+                <mat-form-field appearance="outline">
+                  <mat-label>پیام</mat-label>
+                  <input type="text" maxlength="100" formControlName="shop_moto" matInput required />
+                  <mat-error
+                    *ngIf="SI['shop_moto'].errors?.['required'] && (SI['shop_moto'].dirty || SI['shop_moto'].touched)">
+                    وارد کردن این فیلد اجباری می باشد.
+                  </mat-error>
+                </mat-form-field>
+              </div>
+              <div class="in" style="display:block ;margin-bottom: 25px;">
+                <button type="button" class="btnMap" (click)="openMap()" mat-raised-button>نقشه</button>
+                <span class="mat-error error-marker" *ngIf="marker">موقعیت خود را مشخص نمایید</span>
+              </div>
+              <div class="in">
+                <section class="example-section">
+                  <mat-checkbox class="example-margin" formControlName="is_counter">پذیریش </mat-checkbox>
+                </section>
+              </div>
+            </div>
+            <div class="footer-action">
+              <button mat-raised-button matStepperPrevious class="btn-prev">قبلی</button>
+              <button mat-raised-button matStepperNext class="btn-next">بعدی</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </mat-step>
+    <mat-step [stepControl]="documentFormGroup" label="آپلود مدارک">
+      <div class="item-step form-step">
+        <div class="head">آپلود مدارک</div>
+        <div class="contant">
+          <div>
+            <form [formGroup]="documentFormGroup" (ngSubmit)="onSubmitDocument()">
+              <div class="box-file">
+                <!-- <div class="in-file cart">
+                  <input (change)="onFileChange($event , 'cart')" type="file" accept="image/*" class="file-input input-card">
+                  <div class="box-image" *ngIf="imageData">
+                    <button class="btnDelete" (click)="onRemove('cart')">حذف کارت ملی</button>
+                    <img class="img-box" [src]="imageData">
+                    <span class="file-span"></span>
+                  </div>
+                </div> -->
+                <div class="in-file cart">
+                  <input (change)="onFileChange($event , 'cart')" type="file" accept="image/*,.pdf"
+                    class="file-input input-card">
+                  <div class="box-image" *ngIf="imageData">
+                    <button class="btnDelete" (click)="onRemove('cart')">حذف کارت ملی</button>
+                    <img class="img-box" [src]="imageData">
+                    <span class="file-span"></span>
+                  </div>
+                </div>
+
+                <div class="in-file logo">
+                  <input (change)="onFileChange($event , 'logo')" type="file" accept="image/*"
+                    class="file-input input-card">
+                  <div class="box-image" *ngIf="imageData2">
+                    <button class="btnDelete" (click)="onRemove('logo')">حذف لوگو فروشگاه</button>
+                    <img class="img-box" [src]="imageData2">
+                    <span class="file-span"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="alert alert-info">نام فایل باید انگلیسی و بدون کاراکتر اضافه باشد.</div>
+              <div class="footer-action">
+                <button mat-raised-button matStepperPrevious class="btn-prev">قبلی</button>
+                <button mat-raised-button matStepperNext class="btn-next" type="submit" [disabled]="loading">
+                  <i class="fa fa-spinner fa-spin" *ngIf="loading"></i>ثبت
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </mat-step>
+    <!-- <mat-step>
+      <ng-template matStepLabel>پرداخت </ng-template>
+      <div class="item-step form-step">
+        <div class="head">پرداخت</div>
+        <div class="contant">
+          <app-payment></app-payment>
+        </div>
+      </div>
+    </mat-step> -->
+  </mat-stepper>
+</div>

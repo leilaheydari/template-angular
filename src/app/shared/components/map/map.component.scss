@@ -1,0 +1,43 @@
+.map-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 30px;
+}
+
+.map-frame {
+  border: 2px solid black;
+  height: calc(100% - 50px);
+}
+
+#map {
+  height: 100%;
+}
+
+.header-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  direction: rtl;
+  background-color: #fff;
+  height: 50px;
+  padding: 0px 10px;
+  span{
+    font-weight: 500;
+  }
+}
+
+.btnSucces{
+  color: #fff !important;
+  background-color: #28a745;
+}
+
+.box-btn{
+  min-width: 135px;
+}
+
+
+
+

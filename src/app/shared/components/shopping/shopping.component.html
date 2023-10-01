@@ -1,3 +1,30 @@
-<p>
-  shopping works!
-</p>
+<div class="notification">
+  <div class="header">
+      <span class="title"><span class="message">لیست فروشگاه ها</span></span>
+  </div>
+  <div class="body">
+    <ul>
+      <li *ngFor="let item of list">
+        <a (click)="chageShopping(item.id)"  [class.active-shop] = "item.id === activeShop">
+           <div class="item">
+               <div class="right">
+                 <img src="./../../../../assets/images/14.jpg" alt="">
+                 <span class="status"></span>
+               </div>
+               <div class="left">
+                 <div class="title-message">{{item.title}}</div>
+               </div>
+           </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div class="footer">
+       <a [routerLink]="['/places/manage-panels/new-panel']">
+        <i  class="fas fa-plus"></i>
+        افزودن فروشگاه جدید
+       </a>
+  </div>
+</div>
+
+

@@ -15,6 +15,7 @@ import {
   transition,
 } from '@angular/animations';
 import { SharedModule } from '../../shared.module';
+import { getAuthUser } from 'src/app/auth/store/auth.selector';
 
 @Component({
     selector: 'app-navigation',
@@ -84,12 +85,12 @@ export class NavigationComponent {
 
     });
 
-    // this.subscription2$ = this.store.select(getAuthUser).subscribe((res: any) => {
-    //   if (res) {
-    //     this.userType = GetUserType.find(e => e.value === res.user_type);
-    //     this.user = `${res.first_name} ${res.last_name}`;
-    //   }
-    // });
+    this.subscription2$ = this.store.select(getAuthUser).subscribe((res: any) => {
+      if (res) {
+        this.userType = GetUserType.find(e => e.value === res.user_type);
+        this.user = `${res.first_name} ${res.last_name}`;
+      }
+    });
     // this.subscription3$ = this.store.select(getAuthCurrentShop).subscribe((res: any) => {
     //   if (res) {
     //     this.credit = res.credit;

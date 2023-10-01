@@ -1,3 +1,56 @@
-<p>
-  notification-email works!
-</p>
+<div class="notification">
+  <div class="header">
+      <span class="title"><span class="digital"></span><span class="message">پیغام ها</span></span>
+      <a class="mark" [routerLink]="['/notification']">
+       <span> مشاهده
+        <i class="far fa-arrow-left" aria-hidden="true"></i></span>
+      </a>
+  </div>
+
+  <div *ngIf="loading" class="box-skeleton">
+    <ul *ngFor="let item of [].constructor(4); let i = index">
+      <li >
+       <div class="item-skeleton">
+        <div class="right skeleton-img skeleton">
+        </div>
+        <div class="left">
+          <div class="title-box skeleton-text skeleton">
+            <div class="name"></div>
+            <div class="date digital"></div>
+          </div>
+          <div class="title-message skeleton-message skeleton"></div>
+        </div>
+       </div>
+      </li>
+    </ul>
+  </div>
+  <div class="body"  *ngIf="!loading">
+    <ul>
+      <li *ngFor="let item of list">
+        <a [routerLink]="['/notification']">
+           <div class="item">
+               <div class="right">
+                 <img src="./../../../../assets/images/13.jpg" alt="">
+                 <span class="status"></span>
+               </div>
+               <div class="left">
+                 <div class="title-box">
+                   <div class="name">
+                    <span>حساسیت : </span>
+                    {{item.sensitivity === 1 ?  'زیاد' : 'کم'}}</div>
+                   <div class="date digital">
+                    <span>{{item.created_at}}</span>
+                  </div>
+                 </div>
+                 <div class="title-message">{{item.title}}</div>
+               </div>
+           </div>
+        </a>
+      </li>
+    </ul>
+    <div *ngIf="message" class="message-notification">پیغامی وجود ندارد</div>
+  </div>
+  <div class="footer">
+       <a [routerLink]="['/notification']">مشاهده همه</a>
+  </div>
+</div>

@@ -21,6 +21,7 @@ import {
   animate,
   transition,
 } from '@angular/animations';
+import { getAuthCurrentShop } from 'src/app/auth/store/auth.selector';
 
 @Component({
     selector: 'app-header',
@@ -78,7 +79,7 @@ export class HeaderComponent implements OnInit {
     credit: number = 0;
     counter: number = 0;
     counterMessage: number = 0;
-    activeShop: string = '';
+    activeShop: any;
     open: boolean = false;
     subscription1$!: Subscription;
     subscription2$!: Subscription;
@@ -104,25 +105,32 @@ export class HeaderComponent implements OnInit {
         this.breakpoint = res.matches;
       });
 
-      // this.subscription2$ = this.store.select(getAuthCurrentShop).subscribe(res => {
-      //   if (res != null) {
-      //     this.activeShop = res['title']
-      //   }
-      // });
-     
-      
+
+      const test = [
+        {
+          title:'نارون',
+          id:'98674d13-ffba-492c-bb6b-3fc514bddf07',
+        },
+        {
+          title:'گلچهره',
+          id:'98674d13-ffba-492c-bb6b-3fc514bddf09',
+        },
+        {
+          title:'بوگاتی',
+          id:'98674d13-ffba-492c-bb6b-3fc514bddf06',
+        },
+       ]
+
+      this.subscription2$ = this.store.select(getAuthCurrentShop).subscribe(res => {
+        if (res != null) {
+          this.activeShop = test.find(e => e.id === res['id'])?.title
+        }
+      });
+
+
     }
 
     ngOnInit(): void {
-
-      // this.subscription3$ = this.store.select(getNavigationMobilePanel).subscribe(res => {
-      //   this.openedMobile = res;
-      // });
-
-      // this.subscription4$ = this.store.select(getShowNavigation).subscribe((res: any) => {
-      //   this.open = res
-      // });
-
       this.subscription5$ = this.store.select(getClickOutside).subscribe((res) => {
         this.side = res;
       });
@@ -146,22 +154,6 @@ export class HeaderComponent implements OnInit {
         }
       });
 
-      // تعداد کارها
-      // this.subscription7$ = this.store.select(getCountJob).subscribe((res: any) => {
-      //   if (res > 0) {
-      //     this.counter = res;
-      //   }
-      //   else {
-      //     this.counter = res;
-      //   }
-      // });
-
-      // تعداد پیغام ها
-      // this.subscription8$ = this.coreService.GetNewNotifications(1, 10).subscribe(res => {
-      //   if (res.returns.status === 200) {
-      //     this.counterMessage = res.entries.new_count;
-      //   }
-      // })
     }
 
     ngAfterContentChecked() {

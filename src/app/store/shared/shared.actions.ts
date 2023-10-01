@@ -6,7 +6,7 @@ export const SET_ACTION_NAVIGATION_PANEL = '[shared] set show navigation panel';
 export const SET_ACTION_NAVIGATION_MOBILE_PANEL = '[shared] set show navigation mobile panel';
 export const SET_ACTION_CLICK_OUT_SIDE = '[shared] set click out side';
 export const SET_BUTTON_LOADING = '[shared] set button spinner';
-
+export const SET_API = '[shared] set api';
 
 export const setTitle = createAction(
   SET_TITLE, props<{ status: {} }>());
@@ -27,4 +27,7 @@ export const setClickOutside = createAction(
   SET_ACTION_CLICK_OUT_SIDE, props<{ status: string }>());
 
 export const setButtonLoading = createAction(
-    SET_BUTTON_LOADING, props<{ status: boolean }>());
+  SET_BUTTON_LOADING, props<{ status: boolean }>());
+
+export const setApi = createAction(
+  SET_API, props<{ status: {} }>());

@@ -1,0 +1,101 @@
+<div class="box">
+  <div class="header-dialog">
+    <i class="fas fa-file-alt"></i>
+    ثبت مشخصات و آپلود مدارک
+  </div>
+  <div class="content" dir="rtl">
+    <form [formGroup]="FileForm" (ngSubmit)="onSubmit()">
+      <div class="box-title">
+        <span class="head-title">
+          <span class="title-text">اطلاعات شرکت</span>
+        </span>
+      </div>
+      <div class="fx-2">
+        <div class="in">
+          <mat-form-field appearance="outline">
+            <mat-label>نام شرکت</mat-label>
+            <input type="text" formControlName="mobile" matInput />
+          </mat-form-field>
+        </div>
+        <div class="in">
+          <mat-form-field appearance="outline">
+            <mat-label>کد اقتصادی</mat-label>
+            <input type="number" formControlName="mobile" matInput />
+          </mat-form-field>
+        </div>
+        <div class="in">
+          <mat-form-field appearance="outline">
+            <mat-label>شناسه ملی شرکت</mat-label>
+            <input type="number" formControlName="mobile" matInput />
+          </mat-form-field>
+        </div>
+        <div class="in">
+          <mat-form-field appearance="outline">
+            <mat-label>شماره ثبت</mat-label>
+            <input type="number" formControlName="mobile" matInput />
+          </mat-form-field>
+        </div>
+      </div>
+      <div class="box-title">
+        <span class="head-title">
+          <span class="title-text">آپلود مدارک</span>
+        </span>
+      </div>
+      <div class="alert alert-info">حداکثر حجم فایل 1 مگابایت می باشد.
+        فرمت های معتبر برای فایلها، png , jpg , jpeg , pdf می باشند.</div>
+      <div class="box-file">
+        <div class="in-file cart">
+          <input (change)="onFileChange($event , 'cart')" type="file" accept="image/*,.pdf"
+            class="file-input input-card">
+          <div class="box-image" *ngIf="imageData">
+            <button class="btnDelete" (click)="onRemove('cart')">حذف کارت ملی</button>
+            <img class="img-box" [src]="imageData">
+            <span class="file-span"></span>
+          </div>
+        </div>
+        <div class="in-file logo">
+          <input (change)="onFileChange($event , 'logo')" type="file" accept="image/*,.pdf" class="file-input input-card">
+          <div class="box-image" *ngIf="imageData2">
+            <button class="btnDelete" (click)="onRemove('logo')">حذف لوگو فروشگاه</button>
+            <img class="img-box" [src]="imageData2">
+            <span class="file-span"></span>
+          </div>
+        </div>
+        <div class="in-file signature">
+          <input (change)="onFileChange($event , 'signature')" type="file" accept="image/*,.pdf" class="file-input input-card">
+          <div class="box-image" *ngIf="imageData3">
+            <button class="btnDelete" (click)="onRemove('logo')">حذف فایل امضا</button>
+            <img class="img-box" [src]="imageData3">
+            <span class="file-span"></span>
+          </div>
+        </div>
+        <div class="in-file contract">
+          <input (change)="onFileChange($event , 'contract')" type="file" accept="image/*,.pdf" class="file-input input-card">
+          <div class="box-image" *ngIf="imageData4">
+            <button class="btnDelete" (click)="onRemove('contract')">حذف قرارداد</button>
+            <img class="img-box" [src]="imageData4">
+            <span class="file-span"></span>
+          </div>
+        </div>
+        <div class="in-file birthCertificate">
+          <input (change)="onFileChange($event , 'birthCertificate')" type="file" accept="image/*,.pdf" class="file-input input-card">
+          <div class="box-image" *ngIf="imageData5">
+            <button class="btnDelete" (click)="onRemove('birthCertificate')">حذف فایل شناسنامه</button>
+            <img class="img-box" [src]="imageData5">
+            <span class="file-span"></span>
+          </div>
+        </div>
+
+      </div>
+      <div class="action-footer">
+        <button type="submit" mat-dialog-close class="btn-close" mat-raised-button>
+          لغو
+        </button>
+        <button type="submit" mat-dialog-close [disabled]="FileForm.invalid" class="btnDefult" mat-raised-button>
+          ثبت
+        </button>
+      </div>
+    </form>
+  </div>
+  <div class="footer"></div>
+</div>

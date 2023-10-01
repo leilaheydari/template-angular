@@ -1,3 +1,59 @@
-<p>
-  notification-bell works!
-</p>
+<div class="notification">
+  <div class="header">
+    <span class="title">خبر ها</span>
+    <a class="mark" [routerLink]="['/work-management']">
+      <span>
+        مشاهده
+        <i class="far fa-arrow-left" aria-hidden="true"></i>
+      </span>
+    </a>
+  </div>
+  <div *ngIf="loading" class="box-skeleton">
+    <ul *ngFor="let item of [].constructor(5); let i = index">
+      <li >
+       <div class="item-skeleton">
+        <div class="right skeleton-img skeleton">
+        </div>
+        <div class="left">
+          <div class="title-box skeleton-text skeleton">
+            <span class="title"></span>
+            <span class="name"></span>
+          </div>
+          <div class="date digital skeleton-date skeleton">
+            <span></span>
+          </div>
+        </div>
+       </div>
+      </li>
+    </ul>
+  </div>
+  <div class="body" *ngIf="!loading">
+    <ul>
+      <li *ngFor="let item of list">
+        <a [routerLink]="['/work-management']">
+          <div class="item">
+            <div class="right">
+              <img src="./../../../../assets/images/1.jpg" alt="">
+              <span class="status"></span>
+            </div>
+            <div class="left">
+              <div class="title-box">
+                <span class="title">{{item.task_type_display}}</span>
+                <span> - </span>
+                <span class="name">{{item.status_display}}</span>
+              </div>
+              <div class="date digital">
+                <span>{{item.created_at}}</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <div *ngIf="message" class="message-bell">هیچ رویدادی ثبت نشده.</div>
+  </div>
+
+  <div class="footer">
+    <a [routerLink]="['/work-management']">مشاهده همه</a>
+  </div>
+</div>

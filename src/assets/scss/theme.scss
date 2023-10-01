@@ -145,13 +145,13 @@ button , .mat-raised-button{
 }
 
 .btnDefult {
-  background-color: #061950;
-  color: #fff;
+  background-color: #061950 !important;
+  color: #fff !important;
 }
 
 .btnAccent{
-  background-color: #ff4081;
-  color: #fff;
+  background-color: #ff4081 !important;
+  color: #fff !important;
 }
 
 .mat-select-panel .mat-optgroup-label, .mat-select-panel .mat-option {

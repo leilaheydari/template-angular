@@ -1,0 +1,230 @@
+@import url('./../../../../../../../assets/scss/Form.scss');
+
+.page-htb-shop {
+  padding: 1.25rem 0px 10px 0px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 12px 7px 13px -3px #b4bfd8;
+  border: 1px solid transparent;
+  background-color: #fff;
+  z-index: 0;
+  margin-bottom: 20px;
+}
+
+.mat-radio-button~.mat-radio-button {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.item-step {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 10px 0px;
+  line-height: 26px;
+
+  .head {
+    font-weight: bold;
+    border-bottom: 3px dashed #febd2f !important;
+    padding: 5px;
+    margin: 0px 0px 20px 0px;
+    font-size: 16px;
+    font-family: 'YekanBakh';
+    display: block;
+  }
+}
+
+.form-step {
+  padding: 10px;
+  border: 1px solid #dee4f7;
+  border-radius: 6px;
+
+  form {
+    width: 100%;
+    display: block;
+  }
+}
+
+.contant {
+  display: block;
+  width: 100%;
+}
+
+label {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-family: 'YekanBakh';
+  font-weight: 500;
+  color: #14112d;
+}
+
+mat-radio-button {
+  font-family: 'YekanBakh';
+  font-weight: 500;
+  color: #14112d;
+}
+
+.mr-15 {
+  margin-right: 15px;
+}
+
+// -------------------------------------
+.box-file {
+  display: grid;
+  column-gap: 10px;
+  grid-template-columns: repeat(auto-fit, 200px);
+}
+
+.in-file {
+  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px 0px;
+}
+
+input {
+  width: 100%;
+}
+
+input[type=file]::file-selector-button {
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  background-color: #a29bfe;
+  transition: 1s;
+  height: 0px;
+  margin: 0;
+  width: 400px;
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #81ecec;
+  border: 2px solid #00cec9;
+}
+
+.file-input {
+  width: 100%;
+}
+
+.file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.file-input::before {
+  content: '';
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  border: 2px solid #6c5ce7;
+  padding: 0;
+  border-radius: 6px;
+  background-color: #d3d1ff;
+  transition: 1s;
+  height: 250px;
+  outline: none;
+  white-space: nowrap;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 10pt;
+}
+
+.file-input:hover::before {
+  background-color: #daffff;
+  border: 2px solid #00cec9;
+}
+
+.box-image {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+}
+
+.img-box {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+  left: 0;
+  display: block;
+  max-height: 250px;
+  max-width: 180px;
+  width: auto;
+}
+
+.file-span {
+  position: relative;
+  width: 100%;
+  background-color: #fff;
+  height: 250px;
+  display: block;
+  border-radius: 6px;
+  border: 2px solid gray;
+  z-index: 1;
+}
+
+.btnDelete {
+  position: absolute;
+  z-index: 2;
+  top: 50px;
+  margin: auto;
+  left: -5px;
+  right: 0;
+  display: block;
+  background-color: #ff5353;
+  color: #fff;
+  font-size: 14px !important;
+  font-weight: 500;
+  max-width: 120px;
+  overflow: hidden;
+  border: none;
+  outline: none;
+  font-family: 'YekanBakh' !important;
+  cursor: pointer;
+  white-space: nowrap;
+  z-index: 3;
+}
+
+.logo {
+  input[type=file]::before {
+    content: "آپلود لوگو فروشگاه";
+    font-family: 'YekanBakh' !important;
+    font-size: 15px;
+  }
+}
+
+.cart {
+  input[type=file]::before {
+    content: "آپلود کارت ملی";
+    font-family: 'YekanBakh' !important;
+    font-size: 15px;
+  }
+}
+
+.alert {
+  margin: 10px 0px 20px 0px;
+}
+
+@media (max-width: 991.98px) {
+  h1 {
+    font-size: 15px;
+  }
+
+  .box-file {
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+}
+
+.footer-action{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}

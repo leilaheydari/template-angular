@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { authGuard } from '../guards/auth.guard';
 
 const routes: Routes = [
   {
@@ -11,36 +12,19 @@ const routes: Routes = [
         id: 'dashboard',
       },
     },
+    canActivate: [authGuard]
   },
+
   {
-    path: 'settings',
-    loadChildren: () => import('./settings/settings.module').then(m => m.SettingsModule),
+    path: 'places',
+    loadChildren: () => import('./places/places.module').then(m => m.PlacesModule),
     data: {
       breadcrumb: {
-        label: 'تنظیمات',
-        id: 'settings',
+        label: 'مکان ها',
+        id: 'places',
       },
     },
-  },
-  {
-    path: 'support',
-    loadChildren: () => import('./support/support.module').then(m => m.SupportModule),
-    data: {
-      breadcrumb: {
-        label: 'پشتیبانی',
-        id: 'support',
-      },
-    },
-  },
-  {
-    path: 'orders',
-    loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule),
-    data: {
-      breadcrumb: {
-        label: 'سفارشات',
-        id: 'order',
-      },
-    },
+    canActivate: [authGuard]
   },
 ];
 

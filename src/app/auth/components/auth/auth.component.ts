@@ -25,7 +25,7 @@ export class AuthComponent implements OnInit {
         var rt = this.getChild(this.activatedRoute);
         rt.data.subscribe((data: any) => {
           const title = data.title;
-          this.titleService.setTitle('HTB' + '  ' + '|' + '  ' + title)
+          this.titleService.setTitle('OSIMA' + '  ' + '|' + '  ' + title)
         })
       }
     );

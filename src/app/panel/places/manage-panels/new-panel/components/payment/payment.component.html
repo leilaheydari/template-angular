@@ -1,0 +1,48 @@
+<div class="page-htb">
+  <form (ngSubmit)="onSubmit()">
+    <div class="box-payment">
+      <div class="right">
+        <span class="radio"></span>
+        <img class="img-asan" src="./../../../../assets/images/Asan-Pardakht.png">
+        <span class="text">آسان پرداخت</span>
+      </div>
+      <div class="left">
+        <div class="box">
+          <div class="text">
+            <span class="header">شارژ<span style="margin-right:4px">اولیه پنل</span></span>
+            <p>برای فعال سازی پیشخوان مجازی پستی باید اعتبار پنل خود را به مبلغ ۲۹۹ هزارتومان شارژ نمایید. این مبلغ بابت
+              حق اشتراک سالیانه می باشد و غیرقابل عودت است.</p>
+          </div>
+          <div class="price">
+            <span class="digital">299,000</span>
+            <span>تومان</span>
+          </div>
+        </div>
+        <div class="discount">
+          <div class="box-discount">
+            <div class="in75">
+              <mat-form-field appearance="outline">
+                <mat-label>کد تخفیف</mat-label>
+                <input class="digital" type="text" [formControl]="code" matInput />
+              </mat-form-field>
+            </div>
+            <button class="btnDiscount" (click)="CheckDiscount()" [disabled]="code.invalid"
+              mat-raised-button>اعمال</button>
+          </div>
+          <div class="alert alert-success" *ngIf="sendDiscount === 2">مبلغ <span
+              class="digital">{{_discountPrice}}</span> هزار تومان تخفیف برای شما اعمال شد.</div>
+          <div class="alert alert-danger" *ngIf="sendDiscount === 1">کد تخفیف وارد شده معتبر نمی باشد.</div>
+        </div>
+        <div class="total">
+          <span>مجموع پرداختی : </span>
+          <span *ngIf="sendDiscount != 2"><span class="digital">299,000</span>تومان</span>
+          <span *ngIf="sendDiscount === 2"><span class="digital">{{_price}}</span>تومان</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-action">
+      <button type="submit" class="btnDefult" [disabled]="loading" mat-raised-button><i class="fa fa-spinner fa-spin"
+          *ngIf="loading"></i>پرداخت</button>
+    </div>
+  </form>
+</div>

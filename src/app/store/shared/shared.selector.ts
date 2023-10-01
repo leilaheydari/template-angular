@@ -8,6 +8,7 @@ export const SET_ACTION_NAVIGATION_PANEL = 'shared';
 export const SET_ACTION_NAVIGATION_Mobile_PANEL = 'shared';
 export const SET_ACTION_CLICK_OUT_SIDE = 'shared';
 export const SET_BUTTON_LOADING = 'shared';
+export const SET_API = 'shared';
 
 const getTitleState = createFeatureSelector<SharedState>(SET_TITLE);
 const getShowNavigationState = createFeatureSelector<SharedState>(SET_SHOW_NAVIGATION);
@@ -16,7 +17,7 @@ const getNavigationPanelState = createFeatureSelector<SharedState>(SET_ACTION_NA
 const getNavigationMobilePanelState = createFeatureSelector<SharedState>(SET_ACTION_NAVIGATION_Mobile_PANEL);
 const getClickOutsideState = createFeatureSelector<SharedState>(SET_ACTION_CLICK_OUT_SIDE);
 const getButtonLoadingState = createFeatureSelector<SharedState>(SET_BUTTON_LOADING);
-
+const  getApiState = createFeatureSelector<SharedState>(SET_API);
 
 export const getTitle = createSelector(getTitleState, (state) => {
   return state.Title;
@@ -44,5 +45,9 @@ export const getClickOutside = createSelector(getClickOutsideState, (state) => {
 
 export const getButtonLoading = createSelector (getButtonLoadingState , (state) =>{
   return state.ButtonLoading;
+});
+
+export const getApi = createSelector (getApiState , (state) =>{
+  return state.ApiName;
 });
 

@@ -1,0 +1,9 @@
+<div class="tab">
+  <nav mat-tab-nav-bar>
+    <a [routerLinkActiveOptions]="{exact: true}" routerLink="/places/manage-panels/contract" (click)="onChangeTab('')"
+      routerLinkActive="active-tab" mat-tab-link>
+      قراردادها
+    </a>
+  </nav>
+  <router-outlet></router-outlet>
+</div>

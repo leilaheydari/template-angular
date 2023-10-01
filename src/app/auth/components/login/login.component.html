@@ -1,1 +1,42 @@
-<p>login works!</p>
+<div class="box" dir="rtl">
+  <div class="title header-account">ورود به پنل</div>
+  <div class="form">
+    <form  [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+      <div class="in">
+       <mat-form-field  appearance="outline">
+         <mat-label>موبایل</mat-label>
+         <input class="digital" type="text" formControlName="mobile" matInput required/>
+         <mat-error *ngIf="f['mobile'].errors?.['required'] && (f['mobile'].dirty || f['mobile'].touched)">
+          وارد کردن این فیلد اجباری می باشد.
+        </mat-error>
+        <mat-error *ngIf="f['mobile'].errors?.['pattern'] && (f['mobile'].dirty || f['mobile'].touched)">
+          شماره وارد شده صحیح نمی باشد.
+        </mat-error>
+       </mat-form-field>
+      </div>
+       <div class="in">
+         <mat-form-field appearance="outline">
+           <mat-label>رمزعبور</mat-label>
+           <input class="digital" [type]="hide ? 'password' : 'text'" formControlName="password" matInput required
+           placeholder="رمزعبور بایستی بین 8-20 کاراکتر ترکیبی از حروف کوچک ، بزرگ لاتین و اعداد باشد" />
+           <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+           <mat-error *ngIf="f['password'].errors?.['required'] && (f['password'].dirty || f['password'].touched)">
+            وارد کردن این فیلد اجباری می باشد.
+          </mat-error>
+         </mat-form-field>
+       </div>
+       <button type="submit" class="btn-full btn-submit" [disabled]="LoginForm.invalid || loading" mat-raised-button><i class="fa fa-spinner fa-spin" *ngIf="loading"></i>ورود</button>
+   </form>
+   <!-- <div class="footer-link-login">
+    <a [routerLink]="['/authentication/forget-password']" class="title"><strong>رمز خود را فراموش کرده اید؟</strong></a>
+    <div class="title">
+       <div class="box-signup">
+         <div class="account">حساب کاربری ندارید؟</div>
+         <a [routerLink]="['/authentication/sign-up']"><strong>ثبت نام کنید .</strong></a>
+       </div>
+    </div>
+   </div> -->
+  </div>
+</div>

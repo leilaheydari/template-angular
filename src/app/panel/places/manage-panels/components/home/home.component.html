@@ -1,0 +1,201 @@
+<div style="  position: relative;">
+<div class="mobile-box-new-panel">
+  <a class="new-panel" [routerLink]="['/places/manage-panels/new-panel']">
+    <span>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+      ثبت پنل جدید
+    </span>
+  </a>
+</div>
+
+<ul>
+  <li class="box-new-panel">
+    <a [routerLink]="['/places/manage-panels/new-panel']">
+      <span>
+        <i class="fa fa-plus" aria-hidden="true"></i>
+        ثبت پنل جدید
+      </span>
+    </a>
+  </li>
+  <li>
+    <div class="header">
+      <div class="right">
+        <span class="name">فروشگاه بوگاتی</span>
+        <div class="item">
+          <span class="title">نوع :</span>
+          <span class="value">اعتباری</span>
+        </div>
+        <div class="item">
+          <span class="title">استان :</span>
+          <span class="value">همدان</span>
+        </div>
+        <div class="item">
+          <span class="title">شهر :</span>
+          <span class="value">منطقه 13 پستي تهران </span>
+        </div>
+      </div>
+      <div class="left">
+        <div class="box-img">
+          <img src="./../../../../../../assets/images/1.jpg" alt="">
+          <span class="active green-active"></span>
+        </div>
+        <div class="star">
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="item">
+        <div class="title">وضعیت :</div>
+        <div class="value green-active-t">فعال</div>
+      </div>
+      <div class="item">
+        <div class="title">اعتبار:</div>
+        <div class="value">0</div>
+      </div>
+    </div>
+    <div class="action">
+      <div class="item">
+        <span class="title">تاریخ اعتبار پنل :</span>
+        <span class="value">1400-7-3</span>
+      </div>
+      <button class="menu-left" (click)="showIcon()">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </button>
+      <div class="box-icons" *ngIf="show">
+        <button (click)="verifyMap()">
+          <i class="fas fa-map-marked-alt btn-icon-item"></i>
+        </button>
+        <button (click)="verifyMobile()">
+          <i class="fas fa-mobile-android-alt btn-icon-item"></i>
+        </button>
+        <button (click)="verifyEmail()">
+          <i class="fas fa-at btn-icon-item"></i>
+        </button>
+        <button (click)="verifyFile()">
+          <i class="fas fa-file-alt btn-icon-item"></i>
+        </button>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="header">
+      <div class="right">
+        <span class="name">فروشگاه بوگاتی</span>
+        <div class="item">
+          <span class="title">نوع :</span>
+          <span class="value">اعتباری</span>
+        </div>
+        <div class="item">
+          <span class="title">استان :</span>
+          <span class="value">همدان</span>
+        </div>
+        <div class="item">
+          <span class="title">شهر :</span>
+          <span class="value">منطقه 13 پستي تهران </span>
+        </div>
+      </div>
+      <div class="left">
+        <div class="box-img">
+          <img src="./../../../../../../assets/images/1.jpg" alt="">
+          <span class="active red-active"></span>
+        </div>
+        <div class="star">
+          <i class='bx bxs-star'></i>
+          <i class='bx bxs-star-half'></i>
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="item">
+        <div class="title">وضعیت :</div>
+        <div class="value red-active-t">مسدود شده</div>
+      </div>
+      <div class="item">
+        <div class="title">اعتبار:</div>
+        <div class="value">0</div>
+      </div>
+    </div>
+    <div class="action">
+      <div class="item">
+        <span class="title">تاریخ اعتبار پنل :</span>
+        <span class="value">1400-7-3</span>
+      </div>
+      <button class="menu-left" (click)="showIcon()">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </button>
+      <div class="box-icons" *ngIf="false">
+        <i class="fas fa-map-marked-alt btn-icon-item"></i>
+        <i class="fas fa-mobile-android-alt btn-icon-item"></i>
+        <i class="fas fa-at btn-icon-item"></i>
+        <i class="fas fa-file-alt btn-icon-item"></i>
+      </div>
+    </div>
+  </li>
+  <li>
+    <div class="header">
+      <div class="right">
+        <span class="name">فروشگاه بوگاتی</span>
+        <div class="item">
+          <span class="title">نوع :</span>
+          <span class="value">اعتباری</span>
+        </div>
+        <div class="item">
+          <span class="title">استان :</span>
+          <span class="value">همدان</span>
+        </div>
+        <div class="item">
+          <span class="title">شهر :</span>
+          <span class="value">منطقه 13 پستي تهران</span>
+        </div>
+      </div>
+      <div class="left">
+        <div class="box-img">
+          <img src="./../../../../../../assets/images/1.jpg" alt="">
+          <span class="active gray-active"></span>
+        </div>
+        <div class="star">
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+          <i class="bx bx-star"></i>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="item">
+        <div class="title">وضعیت :</div>
+        <div class="value gray-active-t">غیرفعال</div>
+      </div>
+      <div class="item">
+        <div class="title">اعتبار:</div>
+        <div class="value">0</div>
+      </div>
+    </div>
+    <div class="action">
+      <div class="item">
+        <span class="title">تاریخ اعتبار پنل :</span>
+        <span class="value">1400-7-3</span>
+      </div>
+      <button class="menu-left" (click)="showIcon()">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </button>
+      <div class="box-icons" *ngIf="false">
+        <i class="fas fa-map-marked-alt btn-icon-item"></i>
+        <i class="fas fa-mobile-android-alt btn-icon-item"></i>
+        <i class="fas fa-at btn-icon-item"></i>
+        <i class="fas fa-file-alt btn-icon-item"></i>
+      </div>
+    </div>
+  </li>
+</ul>
+
+</div>

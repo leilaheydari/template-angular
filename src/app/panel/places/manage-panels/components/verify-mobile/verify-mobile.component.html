@@ -1,0 +1,28 @@
+<div class="box">
+  <div class="header-dialog">
+    <i  class="fas fa-mobile-android-alt"></i>
+    ثبت شماره موبایل
+  </div>
+  <div class="content" dir="rtl">
+       <form [formGroup]="MobileForm" (ngSubmit)="onSubmit()">
+        <div class="fx" >
+          <div class="in">
+            <mat-form-field appearance="outline">
+              <mat-label>موبایل</mat-label>
+              <input  formControlName="mobile" matInput  />
+            </mat-form-field>
+          </div>
+          </div>
+          <div class="action-footer">
+            <button type="submit" mat-dialog-close class="btn-close" mat-raised-button>
+              لغو
+            </button>
+            <button type="submit" mat-dialog-close [disabled]="MobileForm.invalid"
+            class="btnDefult" mat-raised-button>
+            ارسال کد
+          </button>
+          </div>
+       </form>
+  </div>
+  <div class="footer"></div>
+</div>

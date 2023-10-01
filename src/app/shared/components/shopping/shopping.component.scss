@@ -1,0 +1,140 @@
+.notification {
+  .header {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    overflow: hidden;
+    background: #4a75f7 !important;
+    color: #fff;
+    padding: 13px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    max-height: 47px;
+    .title {
+      font-family: 'YekanBakh';
+      font-weight: 500;
+      font-size: 14px;
+      margin-bottom: 2px;
+      white-space: nowrap;
+      .message{
+        display: inline-block;
+        margin-right: 2px;
+      }
+    }
+  }
+
+  .body {
+    ul {
+      display: block;
+      width: 100%;
+      max-height: 280px;
+      overflow: auto;
+      li {
+        display: block;
+        border-bottom: 1px solid #e2e8f5 !important;;
+        a {
+          display: block;
+          padding: 10px 15px;
+          transition: 0.2s;
+          cursor: pointer;
+          .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            .right {
+              display: flex;
+              margin-left: 20px;
+              position: relative;
+              z-index: 1;
+              img {
+                border-radius: 50%;
+                overflow: hidden;
+                height: 36px;
+                width: 36px;
+                display: inline;
+                position: relative;
+                z-index: 1;
+              }
+              .status{
+                position: absolute;
+                bottom: 3px;
+                left: 0px;
+                width: 6px;
+                height: 6px;
+                background-color: #00cccc;
+                box-shadow: 0 0 0 2px rgb(255 255 255 / 95%);
+                border-radius: 100%;
+                display: block !important;
+                z-index: 2;
+               }
+            }
+            .left {
+              display: flex;
+              flex-grow: 1;
+              flex-direction: column;
+              align-items: flex-start;
+              width: 200px;
+
+           }
+          }
+          &:hover{
+            background: #f6faff;
+            color: #45567b;
+          }
+        }
+        &:last-child{
+          border-bottom: none !important;
+        }
+      }
+    }
+  }
+
+  .footer{
+    border-top: 1px solid #dce1ef;
+    padding: 10px;
+    background: #ffffff;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    box-shadow: -8px 12px 18px 0 rgb(25 42 70 / 10%);
+    a{
+      display: block;
+      text-align: center;
+      color: #283250;
+      font-weight: 500;
+      cursor: pointer;
+      font-family: 'YekanBakh';
+      &:hover{
+       color: #0068ff;
+      }
+    }
+  }
+}
+
+.digital {
+  margin: 0 1px;
+}
+
+.title-message{
+  color: #44516d;
+  font-family: 'Vazirmatn';
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 43px;
+  margin-top: 1px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.fa-plus {
+  margin-left: 3px;
+  position: relative;
+  top: 2px;
+  font-size: 11px;
+}
+
+.active-shop{
+  border-right: 4px solid #00cccc;
+  background-color: rgb(219, 250, 255);
+}

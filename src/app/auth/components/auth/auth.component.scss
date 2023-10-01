@@ -6,11 +6,18 @@
   .right {
     width: 60%;
     position: relative;
-    .box-img{
+    color: #fff;
+    .box-login{
       background-color: #061950;
       position: fixed;
       height: 100%;
       width: 60%;
+      display: flex;
+      align-items: flex-start;
+      padding: 40px 100px;
+      justify-content: center;
+      flex-direction: column;
+      min-height: 100vh;
     }
   }
   .left {
@@ -47,4 +54,28 @@
       }
     }
   }
+}
+
+
+.box-header{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.icon{
+  img{
+    max-width: 80px;
+  }
+}
+
+.title{
+  font-size: 18px;
+  font-weight: 600;
+}
+
+p{
+  line-height: 26px;
 }

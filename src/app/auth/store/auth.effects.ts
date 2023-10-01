@@ -66,20 +66,7 @@ export class AuthEffects {
     { dispatch: false }
   );
 
-  // signUp$ = createEffect(() => {
-  //   return this.actions$.pipe(
-  //     ofType(signupStart),
-  //     exhaustMap((action) => {
-  //       return this.authService.profile(action.status).pipe(
-  //         map((data) => {
-  //           this.store.dispatch(setButtonLoading({ status: false }));
-  //           const user = data.entries;
-  //           return signupSuccess({ user, redirect: true });
-  //         }),
-  //       );
-  //     })
-  //   );
-  // });
+
 
   autoLogin$ = createEffect(() => {
     return this.actions$.pipe(
@@ -95,8 +82,8 @@ export class AuthEffects {
     return this.actions$.pipe(
       ofType(logout),
         map((action) => {
-          // this.authService.logout();
-          // this.router.navigate(['/authentication/login']);
+          this.authService.logout();
+          this.router.navigate(['/authentication/login']);
           const user: object = {};
           return logOutSuccess({user});
         })

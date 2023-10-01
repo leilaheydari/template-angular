@@ -8,6 +8,13 @@ export interface SharedState {
   showNavigationMobilePanel: number;
   ClickOutside: string;
   ButtonLoading: boolean,
+  ApiName: {
+    'url': string,
+    'method': string,
+    'paginator': boolean,
+    'data': any,
+    'moduleName': string,
+  }
 }
 
 export const initialState: SharedState = {
@@ -20,5 +27,12 @@ export const initialState: SharedState = {
   showNavigationMobilePanel: 0,
   ClickOutside: 'outside',
   ButtonLoading: false,
+  ApiName: {
+    'url': '',
+    'method': '',
+    'paginator': false,
+    'data': [],
+    'moduleName': '',
+  },
 };
 
